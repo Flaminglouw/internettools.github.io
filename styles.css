@@ -1,5 +1,5 @@
   body{
-    background-image: url(https://github.com/Flaminglouw/internettools.github.io/blob/main/Background%20img.svg);
+    background-color: rgba(138, 136, 136, 0.815);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@ h1 {
   margin-right: auto;
   padding: 20px;
   max-width: 800px;
-  background-image: url(https://github.com/Flaminglouw/internettools.github.io/blob/main/Black%20Gold%20Minimalist%20Restaurant%20Menu%20Poster.png);
+  background-image: url(menubackground1.svg); /* https://www.canva.com/design/DAFigZQI06s/ZkZZ4FSIfsCx-tmicqJQeg/edit* show my work */
   color:#EDEDED;
  
 }
@@ -80,4 +80,7 @@ width:75%;
 .blocks-container {
   display: flex;
   justify-content: space-between;
+}
+.logo{
+  text-align: center;
 }
