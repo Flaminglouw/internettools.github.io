@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     font-family: sans-serif;
     padding: 20px; 
+    
 }
 h1 {
   font: size 40px;
@@ -12,14 +13,15 @@ h1 {
   margin-bottom: 15px;
 }
 .menu{
+  border: 10px solid gold;
   width: 80%;
-  background-color: #e0ddd9b4;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
   max-width: 800px;
-
-
+  background-image: url(file:///E:/OneDrive/ITools/internettools.github.io/Black%20Gold%20Minimalist%20Restaurant%20Menu%20Poster.svg);
+  color:#EDEDED
+ 
 }
 h1, h2, p{
   text-align: center;
@@ -34,6 +36,7 @@ h1, h2, p{
   margin-top: 5px;
   margin-bottom: 5px;
   font-size: 18px;
+  
 }
 
 
@@ -71,5 +74,10 @@ width:75%;
 .Block4{
   text-align: center;
   width: 300px;
+  display: inline-block
   
+}
+.blocks-container {
+  display: flex;
+  justify-content: space-between;
 }
