@@ -6,6 +6,14 @@ body {
   font-family: sans-serif;
   padding: 20px;
 }
+.logo{
+  max-width: 80%;
+  max-height: 80%;
+  
+ 
+  height: auto;
+  
+}
 
 h1 {
   font-size: 40px;
@@ -16,6 +24,11 @@ h1 {
   text-align: center;
   font-size: 18px;
   margin-bottom: 20px;
+}
+.frame2{
+  background: radial-gradient(circle at center, silver, rgba(136, 135, 133, 0.596));
+  text-align: center;
+
 }
 .topline {
   border: none;
@@ -58,6 +71,22 @@ h1, h2, p {
 .blocks-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.Block2 {
+flex-basis: 100%;
+ position: relative;
+  
+}
+.block-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
 }
 
 .Block2, .Block3, .Block4 {
