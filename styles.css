@@ -147,11 +147,7 @@ ol{
     width: 90%;
     padding: 10px;
   }
-  .logo {
-    max-width: 90%;
-    max-height: 100px; /* Adjust the max-height as needed */
-  }
-
+  
   h1 {
     font-size: 24px;
   }
