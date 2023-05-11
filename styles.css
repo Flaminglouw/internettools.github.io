@@ -67,10 +67,9 @@ h1, h2, p {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  display: block;
+  margin: 0 auto;
 }
-
 /* Responsive Styles */
 
 @media screen and (max-width: 767px) {
