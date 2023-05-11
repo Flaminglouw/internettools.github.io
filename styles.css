@@ -9,13 +9,13 @@
     
 }
 h1 {
-  font: size 40px;
+  font: 5vw; /* adjust here if it looks weird..... i ask chat GPT to help me tune my CSS */
   margin-top: 0;
   margin-bottom: 15px;
 }
 .menu{
   border: 10px solid gold;
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -36,7 +36,7 @@ h1, h2, p{
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 1.2rem;
   
 }
 
@@ -63,27 +63,16 @@ width:75%;
   width: 75%;
 
 }
-.Block2{
-  text-align: center;
-  width: 300px;
-  display: inline-block
-}
-.Block3{text-align: center;
-  width: 300px;
-  display: inline-block
-}
+.Block2,
+.Block3,
 .Block4{
   text-align: center;
-  width: 300px;
+  width: 100%;
   display: inline-block
-  
 }
 .blocks-container {
   display: flex;
   justify-content: space-between;
-}
-.logo{
-  text-align: center;
 }
 img{
   max-width: 100%;
