@@ -50,6 +50,7 @@ h1 {
 
 h1, h2, p {
   text-align: center;
+  color: #EDEDED;
 }
 
 .SDH, .Vorspeise, .hauptspeise, .Getränke, .Nachtisch {
@@ -76,15 +77,33 @@ h1, h2, p {
   flex-wrap: wrap;
 }
 .Block2 {
-flex-basis: 100%;
+flex-basis: 100%;         
  position: relative;
+ background-color: black;
   
 }
-ul{
-  list-style-type: none;
-  padding: none;
-  margin: 0;
+ul {
+  list-style: none;
+  padding: 0;
+  color: #EDEDED;
 }
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weekday {
+  text-align: left;
+  margin-left: 20%;
+}
+
+.hours {
+  text-align: right;
+  margin-right: 15%
+}
+
+
 .block-image {
   max-width: 100%;
   max-height: 100%;
