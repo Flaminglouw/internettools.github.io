@@ -146,7 +146,7 @@ ol{
   height: auto;
   display: block;
   margin: 0 auto;
-  max-height: 150px; /* Adjust the max-height as needed */
+  max-height: auto; /* Adjust the max-height as needed */
 }
 @media screen and (max-width: 767px) {
   /* Styles for smartphones */
@@ -155,8 +155,11 @@ ol{
     padding: 10px;
   }
   .logo {
-    max-width: 80%; /* Adjust the max-width as needed */
-    max-height: 100%; /* Adjust the max-height as needed */
+    max-width: 80%; /* Adjust the max-width as needed for smartphones */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 150px; /* Adjust the max-height as needed for smartphones */
   }
   
   h1 {
