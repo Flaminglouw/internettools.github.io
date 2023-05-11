@@ -76,7 +76,9 @@ h1, h2, p {
   align-items: flex-start;
   flex-wrap: wrap;
 }
-.Block2 {
+.Block2,
+.Block3,
+.Block4 {
 flex-basis: 100%;         
  position: relative;
  background-color: black;
@@ -86,11 +88,16 @@ ul {
   list-style: none;
   padding: 0;
   color: #EDEDED;
+  height:3cm;
 }
 
 li {
   display: flex;
   justify-content: space-between;
+ 
+}
+.three{
+  margin-left: 20%;
 }
 
 .weekday {
@@ -104,6 +111,7 @@ li {
 }
 
 
+
 .block-image {
   max-width: 100%;
   max-height: 100%;
@@ -111,6 +119,7 @@ li {
   height: auto;
   display: block;
   margin: 0 auto;
+  height: 150px;
 
 }
 
@@ -123,6 +132,10 @@ li {
 img {
   display: block;
   margin: 0 auto;
+ 
+}
+a{
+  color: #ffd103;
 }
 /* Responsive Styles */
 
