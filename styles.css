@@ -1,15 +1,12 @@
 body {
-  background-color: rgba(138, 136, 136, 0.815);
+  background: radial-gradient(circle at center, black, silver);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   font-family: sans-serif;
   padding: 20px;
 }
-.logo{
-width: 1000px;
-height: 500px;
-}
+
 
 h1 {
   font-size: 40px;
@@ -21,11 +18,11 @@ h1 {
   font-size: 18px;
   margin-bottom: 20px;
 }
-.frame2{ /*
-  background: radial-gradient(circle at center, silver, rgba(136, 135, 133, 0.596));
-  text-align: center; */
+/*.frame2{ 
+  border: 1px solid silver;
+    padding: 20px;
 
-}
+}*/
 .topline {
   border: none;
   border-top: 2px solid #f8f3f3ad;
@@ -132,8 +129,14 @@ img {
 a{
   color: #ffd103;
 }
-/* Responsive Styles */
-
+ol{
+  list-style: none;
+  padding: 0;
+}
+.end{
+  display: inline-block;
+  margin-right: 10px;
+}
 @media screen and (max-width: 767px) {
   /* Styles for smartphones */
   .menu {
