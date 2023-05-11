@@ -1,80 +1,98 @@
-  body{
-    background-color: rgba(138, 136, 136, 0.815);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: sans-serif;
-    padding: 20px; 
-    
-    
+body {
+  background-color: rgba(138, 136, 136, 0.815);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  padding: 20px;
 }
+
 h1 {
-  font: 5vw; /* adjust here if it looks weird..... i ask chat GPT to help me tune my CSS */
+  font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
 }
-.menu{
+
+.menu {
   border: 10px solid gold;
-  width: 100%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
   max-width: 800px;
-  background-image: url(menubackground1.svg); /* https://www.canva.com/design/DAFigZQI06s/ZkZZ4FSIfsCx-tmicqJQeg/edit* show my work */
-  color:#EDEDED;
- 
+  background-image: url(menubackground1.svg);
+  color: #EDEDED;
 }
-h1, h2, p{
+
+h1, h2, p {
   text-align: center;
 }
-.SDH{
-  text-align: left;
-  width:75%;
 
+.SDH, .Vorspeise, .hauptspeise, .Getränke, .Nachtisch {
+  text-align: left;
+  width: 75%;
 }
+
 .item p {
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 1.2rem;
-  
+  font-size: 18px;
 }
-
 
 .price {
   text-align: right;
   width: 25%;
-  
 }
-.Vorspeise{
-  text-align: left;
-  width:75%;
-}
-.hauptspeise{
-  text-align: left;
-width:75%;
-}
-.Getränke{
-  text-align: left;
-  width:75%;
-}
-.Nachtisch{
-  text-align: left;
-  width: 75%;
 
-}
-.Block2,
-.Block3,
-.Block4{
-  text-align: center;
-  width: 100%;
-  display: inline-block
-}
 .blocks-container {
   display: flex;
   justify-content: space-between;
 }
-img{
+
+.Block2, .Block3, .Block4 {
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+img {
   max-width: 100%;
   height: auto;
 }
+
+/* Responsive Styles */
+
+@media screen and (max-width: 767px) {
+  /* Styles for smartphones */
+  .menu {
+    width: 90%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .SDH, .Vorspeise, .hauptspeise, .Getränke, .Nachtisch {
+    width: 100%;
+  }
+
+  .item p {
+    font-size: 16px;
+  }
+
+  .Block2, .Block3, .Block4 {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets */
+  .menu {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+/* Additional styles for PC browsers can be added here */
