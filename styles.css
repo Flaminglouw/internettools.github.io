@@ -27,20 +27,13 @@ header{
 }
 
 .floating-menu li {
-  margin: 0 10px;
+  margin: 50px 80px;
   text-align: center;
-  flex-grow: 1;
+  
 
 }
-.floating-menu li:first-child,
-.floating-menu li:nth-child(2) {
-  justify-content: flex-end; /* Push Section 1 and 2 to the left */
-}
 
-.floating-menu li:nth-child(4),
-.floating-menu li:nth-child(5) {
-  justify-content: flex-start; /* Push Section 4 and 5 to the right */
-}
+
 
 .floating-menu a {
   text-decoration: none;
@@ -56,16 +49,9 @@ header{
   max-height: 80px;
   margin: 1px auto 0;
 }
-@media (max-width: 600px)
- {
-  .floating-menu li:first-child,
-  .floating-menu li:nth-child(2),
-  .floating-menu li:nth-child(4),
-  .floating-menu li:nth-child(5) {
-    justify-content: center; /* Center all the items */
-  }
+
 /*----------------------------end header---------------------------------------------------------------------------------------*/
- }
+
 .logo {
   max-width: 100%;
   height: auto;
