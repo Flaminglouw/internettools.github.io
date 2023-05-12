@@ -49,6 +49,20 @@ header{
   max-height: 80px;
   margin: 1px auto 0;
 }
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .floating-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  .floating-menu li {
+    margin: 10px 0;
+  }
+
+  
+}
 
 /*----------------------------end header---------------------------------------------------------------------------------------*/
 
