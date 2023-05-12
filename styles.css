@@ -233,10 +233,10 @@ ol{
   .logo {
     max-width: auto; /* Adjust the max-width as needed for smartphones */
     height: auto;
-    width: auto;
     display: block;
     margin: 0 auto;
-    max-height: auto; /* Adjust the max-height as needed for smartphones */
+    max-height: 80px; /* Adjust the max-height as needed for smartphones */
+    padding: 0;
   }
   
   
