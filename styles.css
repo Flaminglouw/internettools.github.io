@@ -235,7 +235,7 @@ ol{
     height: auto;
     display: block;
     margin: 0 auto;
-    max-height: 80px; /* Adjust the max-height as needed for smartphones */
+    max-height: auto; /* Adjust the max-height as needed for smartphones */
     padding: 0;
   }
   
