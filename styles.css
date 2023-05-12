@@ -269,7 +269,10 @@ ol{
     flex-direction: column;
   }
 
-  
+  .floating-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   .floating-menu li {
     margin: 10px 0;
