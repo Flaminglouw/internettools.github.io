@@ -257,6 +257,7 @@ ol{
   }
   .floating-menu {
     height: 60px; /* Adjust the height as needed */
+    padding:10px;
   }
 
   .floating-menu ul {
