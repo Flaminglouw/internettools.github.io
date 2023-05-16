@@ -225,7 +225,7 @@ ol {
   }
 
   .topnav a {
-    padding: 10px 4px; /* if i adjust the padding i can see the text in the nav bar on my phone */
+    padding: 15px 4px; /* if i adjust the padding i can see the text in the nav bar on my phone */
     font-size: 14px;
   }
 
