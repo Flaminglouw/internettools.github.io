@@ -41,7 +41,7 @@
 .topnav-right {
   float: right;
 }
-
+/* Logo in the nav bar */
 .hotellogo {
   display: block;
   margin: 0 auto;
@@ -49,11 +49,12 @@
   max-height: 80px;
   margin-top: 1px;
 }
-/*----------------------------Body---------------------------------------------------------------------------------------*/
+/*---------------------------------Speisekarte---------------------------*/
 
 .logo {
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 100%;
   height: auto;
   max-height: auto; /* Adjust the max-height as needed */
@@ -75,13 +76,9 @@ h1 {
 .greeting {
   text-align: center;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: -50px;
 }
-/*.frame2{ 
-  border: 1px solid silver;
-    padding: 20px;
-
-}*/
 .topline {
   border: none;
   border-top: 2px solid #f8f3f3ad;
@@ -238,9 +235,12 @@ ol {
     max-width: auto; /* Adjust the max-width as needed for smartphones */
     height: auto;
     display: block;
-    margin: 0 auto;
     max-height: auto; /* Adjust the max-height as needed for smartphones */
     padding: 0;
+    padding-top: 60px;
+  }
+  .greeting {
+    margin: 10px;
   }
 
   h1 {
