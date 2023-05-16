@@ -217,7 +217,7 @@ ol {
 }
 
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .topnav {
     max-height: 55px;
     padding: 0 3px;
