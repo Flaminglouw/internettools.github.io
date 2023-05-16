@@ -1,76 +1,19 @@
-/*header---------------------------------------------*/
-header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  background-color: #d9d9d9;
-  border: 1px solid gold;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-height: 80px;
-}
-.floating-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-}
-
-.floating-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.floating-menu li {
-  margin: 0 20px;;
-  
-
-}
-
-
-
-.floating-menu a {
-  text-decoration: none;
-  color: #333;
-}
-
-.hotellogo {
+/*Top Navigation Bar */
+.topnav {
   position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 100%;
-  max-height: 80px;
-  margin: 1px auto 0;
+  background-color: silver;
+  overflow: hidden;
 }
 
-  
-
-  
-
-
-/*----------------------------end header---------------------------------------------------------------------------------------*/
+/*----------------------------Body---------------------------------------------------------------------------------------*/
 
 .logo {
-  max-width: 100%;
-  height: auto;
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  height: auto;
   max-height: auto; /* Adjust the max-height as needed */
-  padding: 50px;
+  padding: 100px;
 }
 
 body {
@@ -81,7 +24,6 @@ body {
   font-family: sans-serif;
   padding: 20px;
 }
-
 
 h1 {
   font-size: 40px;
@@ -112,15 +54,21 @@ h1 {
   padding: 20px;
   max-width: 800px;
   background-image: url(menubackground1.svg);
-  color: #EDEDED;
+  color: #ededed;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   text-align: center;
-  color: #EDEDED;
+  color: #ededed;
 }
 
-.SDH, .Vorspeise, .hauptspeise, .Getränke, .Nachtisch {
+.SDH,
+.Vorspeise,
+.hauptspeise,
+.Getränke,
+.Nachtisch {
   text-align: left;
   width: 75%;
 }
@@ -146,26 +94,23 @@ h1, h2, p {
 .Block2,
 .Block3,
 .Block4 {
-flex-basis: 100%;         
- position: relative;
- background-color: black;
-  
+  flex-basis: 100%;
+  position: relative;
+  background-color: black;
 }
 ul {
   list-style: none;
   padding: 0;
-  color: #EDEDED;
-  height:3cm;
+  color: #ededed;
+  height: 3cm;
 }
 
 li {
   display: flex;
   justify-content: space-between;
- 
 }
-.three{
+.three {
   margin-left: 20%;
-  
 }
 
 .weekday {
@@ -175,10 +120,8 @@ li {
 
 .hours {
   text-align: right;
-  margin-right: 15%
+  margin-right: 15%;
 }
-
-
 
 .block-image {
   max-width: 100%;
@@ -188,10 +131,11 @@ li {
   display: block;
   margin: 0 auto;
   height: 150px;
-
 }
 
-.Block2, .Block3, .Block4 {
+.Block2,
+.Block3,
+.Block4 {
   text-align: center;
   width: 30%;
   max-width: 300px;
@@ -200,32 +144,28 @@ li {
 img {
   display: block;
   margin: 0 auto;
- 
 }
-a{
+a {
   color: #ffd103;
 }
-ol{
+ol {
   list-style: none;
   padding: 0;
 }
-  .project-info {
-    list-style: none;
-    margin-top: 10px;
-    padding: 0;
-  }
-  
-  .project-item {
-    margin-bottom: 5px;
-    color: #EDEDED;
-  }
-  
-  .project-member {
-    font-weight: bold;
-  }
-  
-  
+.project-info {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
 
+.project-item {
+  margin-bottom: 5px;
+  color: #ededed;
+}
+
+.project-member {
+  font-weight: bold;
+}
 
 .content-line {
   border-top: 1px solid #fff;
@@ -251,13 +191,16 @@ ol{
     max-height: auto; /* Adjust the max-height as needed for smartphones */
     padding: 0;
   }
-  
-  
+
   h1 {
     font-size: 24px;
   }
 
-  .SDH, .Vorspeise, .hauptspeise, .Getränke, .Nachtisch {
+  .SDH,
+  .Vorspeise,
+  .hauptspeise,
+  .Getränke,
+  .Nachtisch {
     width: 100%;
   }
 
@@ -265,7 +208,9 @@ ol{
     font-size: 16px;
   }
 
-  .Block2, .Block3, .Block4 {
+  .Block2,
+  .Block3,
+  .Block4 {
     max-width: 100%;
   }
   .floating-menu {
@@ -296,13 +241,11 @@ ol{
   .blocks-container {
     justify-content: space-between; /* Adjust the alignment as needed */
   }
-  
+
   .Block2,
   .Block3,
   .Block4 {
     max-width: calc(33.33% - 20px); /* Adjust the width and margin as needed */
     margin-bottom: 20px; /* Add margin between the blocks */
   }
- 
-
 }
