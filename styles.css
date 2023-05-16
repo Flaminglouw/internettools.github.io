@@ -232,6 +232,9 @@ ol {
   .topnav-centered a {
     transform: translate(-50%, -10%);
   }
+  .topnav-right {
+    float: none;
+  }
   .hotellogo {
     display: block;
     max-height: 50px;
