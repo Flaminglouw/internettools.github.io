@@ -219,18 +219,22 @@ ol {
 /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
 @media screen and (max-width: 768px) {
   .topnav {
-    max-height: 55px;
-    padding: 0 3px;
+    max-height: 48px;
+    padding: 0 6px;
     margin-left: -10px;
   }
 
   .topnav a {
-    padding: 10px 6px; /* if i adjust the padding i can see the text in the nav bar on my phone */
+    padding: 22px 10px; /* if i adjust the padding i can see the text in the nav bar on my phone */
     font-size: 14px;
   }
 
   .topnav-centered a {
-    transform: translate(-49%, -10%);
+    transform: translate(-50%, -10%);
+  }
+  .hotellogo {
+    display: block;
+    max-height: 50px;
   }
 
   .menu {
