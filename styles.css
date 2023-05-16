@@ -50,6 +50,37 @@
   margin-top: 1px;
 }
 /*---------------------------------Speisekarte---------------------------*/
+.menu {
+  border: 10px solid gold;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  color: #ededed;
+  padding-top: 100px;
+}
+.SDH,
+.Vorspeise,
+.hauptspeise,
+.Getränke,
+.Nachtisch {
+  text-align: left;
+  width: 75%;
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  width: 75%;
+  margin: 10px;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
 
 /*-----------------------------------Reservation------------------------------------*/
 .formbody {
@@ -90,43 +121,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-.menu {
-  border: 10px solid gold;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  max-width: 800px;
-  background-image: url(menubackground1.svg);
-  color: #ededed;
-}
-
 h1,
 h2,
 p {
   text-align: center;
   color: #ededed;
-}
-
-.SDH,
-.Vorspeise,
-.hauptspeise,
-.Getränke,
-.Nachtisch {
-  text-align: left;
-  width: 75%;
-}
-
-.item p {
-  display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-
-.price {
-  text-align: right;
-  width: 25%;
 }
 
 .blocks-container {
