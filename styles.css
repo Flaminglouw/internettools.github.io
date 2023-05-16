@@ -1,10 +1,54 @@
 /*Top Navigation Bar */
+
 .topnav {
-  position: relative;
-  background-color: silver;
+  position: fixed;
+  background-color: #d9d9d9;
   overflow: hidden;
+  top: 0;
+  width: 99%;
+  max-height: 75px;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transform: translate(
+    0,
+    -200%
+  ); /* this asdjust the height of the link in the navbar x,y axis */
+}
+/* Change the colour of links on hover */
+.topnav a:hover {
+  background-color: black;
+  color: gold;
 }
 
+/* Centerd section inside the top navigation */
+.topnav-centered a {
+  float: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -15%); /* this move the logo on the x,y axis */
+  display: inline-block;
+}
+/*Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+.hotellogo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 80px;
+  margin-top: 1px;
+}
 /*----------------------------Body---------------------------------------------------------------------------------------*/
 
 .logo {
@@ -21,8 +65,6 @@ body {
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: sans-serif;
-  padding: 20px;
 }
 
 h1 {
@@ -172,13 +214,22 @@ ol {
   margin: 20px 0;
 }
 
-@media screen and (max-width: 767px) {
-  /* Styles for smartphones */
-  header {
-    height: auto;
-    flex-direction: column;
-    padding: 10px;
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav {
+    max-height: 60px;
+    padding: 0 10px;
   }
+
+  .topnav a {
+    padding: 10px 2px; /* if i adjust the padding i can see the text in the nav bar on my phone */
+    font-size: 14px;
+  }
+
+  .topnav-centered a {
+    transform: translate(-59%, -10%);
+  }
+
   .menu {
     width: 90%;
     padding: 10px;
