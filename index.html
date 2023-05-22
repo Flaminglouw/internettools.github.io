@@ -1,95 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- freecodecamp.org i saw that there-->
-  <title>Hotel Internettools Homepage</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- freecodecamp.org i saw that there-->
+<title>Hotel Internettools Homepage</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<!--Icon Library-->
+<script src="https://kit.fontawesome.com/ab21408051.js" crossorigin="anonymous"></script>
+<!-- I saw this here* and my own link * <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
+
 </head>
 
 <body>
-  <div class="topnav">
+  <!--Navigation Menu-->
+  <nav class="topnav" Id="myTopnav">
     <!--https://www.w3schools.com/howto/howto_css_fixed_menu.asp, https://www.w3schools.com/howto/howto_css_topnav_centered.asp I used this to build the Fixed Menu-->
-    <!--Centered Logo Link-->
-    <div class="topnav-centered">
-      <a href="index.html" class="active"><img src="logohotel2.png" alt="Hotellogo" class="hotellogo"></a>
-    </div>
-    <!--Left-aligend links-->
-    <a href="index.html">Zurück</a>
-    <a href="#rooms">Zimmer</a>
+    <a href="timmaybe.html">Über uns</a>
+    <a href="hayat.html">Zimmer</a>
+    <a href="index.html" class="active"><img src="logohotel5a.png" alt="Hotellogo" class="hotellogo"></a>
+    <a href="restaurant.html">Restaurant</a>
+    <a href="tim.html">Sehenswürdigkeiten</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
 
-    <!--Right-aligend links-->
-    <div class="topnav-right">
-      <a href="restaurant.html">Restaurant</a>
-      <a href="#Sehenswürdigkeiten">Sehenswürdigkeiten</a>
-    </div>
 
+
+  <div>
+    <!--img src="logohotel.png" alt="Hotellogo" class="logo"-->
+    <img src="logohotel.png" alt="" class="logo">
   </div>
-
-
-
-  <img src="logohotel2.png" alt="Hotellogo" class="logo">
-  <img src="logohotel.png" alt="" class="logo">
   <h1>Hi Guys this is just a quick Homepage. I build it, just to make it easier to navigate the rest of my part. If we
     want to use, or build on this we can.</h1>
   <p>I wanted to test the "Floating-menu" I hope you like it haha</p>
-  <p>123456</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
 
-  <h1>Wilkommen im Hotel Internettools </h1>
-  <section id="banner">
-    <h2>Experience Luxury and Comfort usw blah</h2>
-    <p>blah blah stuff book with us blah.</p>
-    <p>tests stastsat
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <p>aaaaaaaaaaaaaaaaaaaaa</p>
+  <var><var>
+      <p>aaaaaaaaaaaaaaaaaaaaa</p>
+      v
+      <p>aaaaaaaaaaaaaaaaaaaaa</p>
+    </var></var>
 
-    </p>
-
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>blah blah nice give money blah blah</p>
-    <!-- Add more content here -->
-  </section>
-
-  <section id="rooms">
-    <h2>Rooms</h2>
-    <!-- Add room information here -->
-  </section>
-
-  <section id="amenities">
-    <h2>Amenities</h2>
-    <!-- Add amenities information here -->
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <!-- Add contact form or information here -->
-  </section>
 </body>
-
-
-<footer>
-  <ol class="footer-list">
-    <li class="footer-item">Modul: Internetanwendungen</li>
-    <li class="footer-item">Prof. Forster</li>
-    <li class="footer-item">Mitglieder:</li>
-  </ol>
-
-  <ul class="project-info">
-    <li class="project-item">
-      <span class="project-member">Johannes:</span> Restaurant-Bereich
-    </li>
-    <li class="project-item">
-      <span class="project-member">Hayat:</span> Zimmerbuchungs-Bereich
-    </li>
-    <li class="project-item">
-      <span class="project-member">Tim:</span> Sehenswürdigkeiten-Bereich
-    </li>
-  </ul>
-
-
-
-</footer>
 
 </html>

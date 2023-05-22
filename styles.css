@@ -1,14 +1,17 @@
 /*Top Navigation Bar */
-
 .topnav {
-  position: fixed;
-  background-color: #d9d9d9;
+  /*https://www.w3schools.com/howto/howto_js_topnav_responsive.asp I got help from this webiste */
   overflow: hidden;
-  top: 0;
-  width: 99%;
-  max-height: 75px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding-left: 48px; /* At the moment I am not sure why the logo and the body's logo dont align*/
+  max-height: 100px;
 }
-/* Style the links inside the navigation bar */
+
 .topnav a {
   float: left;
   display: block;
@@ -17,76 +20,78 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  transform: translate(
-    0,
-    -200%
-  ); /* this asdjust the height of the link in the navbar x,y axis */
 }
-/* Change the colour of links on hover */
+
 .topnav a:hover {
-  background-color: black;
-  color: gold;
+  background-color: gold;
+  color: black;
 }
 
-/* Centerd section inside the top navigation */
-.topnav-centered a {
-  float: none;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -15%); /* this move the logo on the x,y axis */
-  display: inline-block;
+.topnav a.active {
+  color: white;
 }
-/*Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
+
+.topnav .icon {
+  display: none;
+  position: absolute;
+  right: 0;
 }
-/* Logo in the nav bar */
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    padding: 0;
+    max-height: 600px; /* this keeps the button menu visable... */
+  }
+  .topnav a:not(:nth-child(3)) {
+    /*The media query is used to hide all the a elements except the first one using the :not(:nth-child(1)) selector.//source chatGPT//*/
+    display: none;
+    text-align: center;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    /*The .topnav.responsive class is used to target the responsive behavior.//source chatGPT//*/
+    flex-direction: column;
+    align-items: flex;
+    position: fixed;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    /*The .topnav.responsive a selector is used to make the links display as blocks for the vertical layout//source chatGPT//*/
+    float: none;
+    display: block;
+  }
+}
 .hotellogo {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  max-height: 80px;
-  margin-top: 1px;
+  max-height: 100px;
 }
-/*---------------------------------Speisekarte---------------------------*/
-.menu {
-  border: 10px solid gold;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
+/*-------Body----------------*/
+
+body {
+  margin: 0;
+  background: radial-gradient(black, silver);
+}
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+h1,
+h2,
+p {
+  text-align: center;
   color: #ededed;
-  padding-top: 100px;
 }
-.SDH,
-.Vorspeise,
-.hauptspeise,
-.Getränke,
-.Nachtisch {
-  text-align: left;
-  width: 75%;
-}
-
-.item p {
-  display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 18px;
-  width: 75%;
-  margin: 10px;
-}
-
-.price {
-  text-align: right;
-  width: 25%;
-}
-
-/*-----------------------------------Reservation------------------------------------*/
-.formbody {
-  padding-top: 100px;
-}
-
 .logo {
   display: block;
   margin-left: auto;
@@ -96,19 +101,19 @@
   max-height: auto; /* Adjust the max-height as needed */
   padding: 100px;
 }
-
-body {
-  background: radial-gradient(circle at center, black, silver);
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+@media screen and (max-width: 600px) {
+  .logo {
+    max-width: auto; /* Adjust the max-width as needed for smartphones */
+    height: auto;
+    display: block;
+    max-height: auto; /* Adjust the max-height as needed for smartphones */
+    padding: 0;
+    padding-top: 120px;
+  }
 }
 
-h1 {
-  font-size: 40px;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
+/*---------------------------------Restaurant----------------------------*/
+
 .greeting {
   text-align: center;
   font-size: 18px;
@@ -120,26 +125,15 @@ h1 {
   border-top: 2px solid #f8f3f3ad;
   margin-bottom: 20px;
 }
-
-h1,
-h2,
-p {
-  text-align: center;
-  color: #ededed;
-}
-
 .blocks-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  padding-top: 50px;
 }
 .Block2,
 .Block3,
 .Block4 {
   flex-basis: 100%;
-  position: relative;
   background-color: black;
 }
 ul {
@@ -184,11 +178,40 @@ li {
   width: 30%;
   max-width: 300px;
 }
+@media screen and (max-width: 600px) {
+  .greeting {
+    margin: 5px;
+    padding-top: 60px;
+  }
 
-img {
-  display: block;
-  margin: 0 auto;
+  h1 {
+    font-size: 24px;
+  }
+
+  .SDH,
+  .Vorspeise,
+  .hauptspeise,
+  .Getränke,
+  .Nachtisch {
+    width: 100%;
+  }
+
+  .item p {
+    font-size: 16px;
+  }
+
+  .Block2,
+  .Block3,
+  .Block4 {
+    max-width: 100%;
+  }
 }
+/*------------------------Reservation-------------------------*/
+.formbody {
+  padding: 100px;
+}
+
+/*------------------------Footer------------------------------*/
 a {
   color: #ffd103;
 }
@@ -216,100 +239,37 @@ ol {
   margin: 20px 0;
 }
 
-/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
-@media screen and (max-width: 768px) {
-  .topnav {
-    max-height: 48px;
-    padding: 0 6px;
-    margin-left: -10px;
-  }
-
-  .topnav a {
-    padding: 22px 10px; /* if i adjust the padding i can see the text in the nav bar on my phone */
-    font-size: 14px;
-  }
-
-  .topnav-centered a {
-    transform: translate(-50%, -10%);
-  }
-  .topnav-right {
-    float: none;
-  }
-  .hotellogo {
-    display: block;
-    max-height: 50px;
-  }
-
-  .menu {
-    width: 90%;
-    padding: 10px;
-  }
-  .logo {
-    max-width: auto; /* Adjust the max-width as needed for smartphones */
-    height: auto;
-    display: block;
-    max-height: auto; /* Adjust the max-height as needed for smartphones */
-    padding: 0;
-    padding-top: 60px;
-  }
-  .greeting {
-    margin: 10px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  .SDH,
-  .Vorspeise,
-  .hauptspeise,
-  .Getränke,
-  .Nachtisch {
-    width: 100%;
-  }
-
-  .item p {
-    font-size: 16px;
-  }
-
-  .Block2,
-  .Block3,
-  .Block4 {
-    max-width: 100%;
-  }
-  .floating-menu {
-    flex-direction: column;
-  }
-
-  .floating-menu ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .floating-menu li {
-    margin: 10px 0;
-  }
+/*---------------------------------Speisekarte---------------------------*/
+.menu {
+  border: 10px solid gold;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  color: #ededed;
+  padding-top: 100px;
+}
+.SDH,
+.Vorspeise,
+.hauptspeise,
+.Getränke,
+.Nachtisch {
+  text-align: left;
+  width: 75%;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Styles for tablets */
-  .menu {
-    width: 90%;
-    padding: 15px;
-  }
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  width: 75%;
+  margin: 10px;
 }
 
-/* Additional styles for PC browsers can be added here */
-@media screen and (min-width: 1200px) {
-  /* Styles for a maximized window in a PC browser */
-  .blocks-container {
-    justify-content: space-between; /* Adjust the alignment as needed */
-  }
-
-  .Block2,
-  .Block3,
-  .Block4 {
-    max-width: calc(33.33% - 20px); /* Adjust the width and margin as needed */
-    margin-bottom: 20px; /* Add margin between the blocks */
-  }
+.price {
+  text-align: right;
+  width: 25%;
 }
+
+/*-----------------------------------Reservation------------------------------------*/
