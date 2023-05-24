@@ -35,3 +35,13 @@ function showSlides(n) {
 setInterval(function () {
   plusSlides(1);
 }, 5000); // Change slide every 5 seconds (adjust the duration as needed)
+
+// date for placeholder
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Code to set the default date value
+  const dateInput = document.getElementById("dateInput");
+  const currentDate = new Date();
+  const formattedDate = currentDate.toISOString().slice(0, 16);
+  dateInput.value = formattedDate;
+});

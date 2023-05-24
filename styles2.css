@@ -7,7 +7,7 @@
   border: 1px solid black;
   border-radius: 10px;
   z-index: 10;
-  background-color: white;
+  background-color: #b99668;
   width: 800px;
   max-width: 80%;
   max-height: 80%;
@@ -31,6 +31,13 @@
   font-size: 1.25rem;
   font-weight: bold;
 }
+.title {
+  text-align: center;
+  margin: auto;
+}
+.modal-header .title h1 {
+  color: black;
+}
 
 .modal-header .close-button {
   cursor: pointer;
@@ -49,7 +56,17 @@
   align-items: center;
   flex-wrap: wrap;
 }
-
+/*-----------------Reservation-------------------------*/
+.modal-body p {
+  color: black;
+}
+.input-1 {
+  color: black;
+  display: block;
+  width: 300px;
+}
+.input-2 {
+}
 .modal-body h5 {
   margin: 0;
   width: 100%; /* Adjust the width as per your preference */
@@ -62,6 +79,9 @@
   font-size: 18px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+}
+.modal-body p {
+  font-size: 16px;
 }
 
 #overlay {
@@ -99,6 +119,8 @@
   /* CSS properties for the second button */
   top: -760px;
 }
+
+/*media for smartphones*/
 @media screen and (max-width: 600px) {
   .modalbutton {
     top: 25px; /* Move the button 10 pixels down */
@@ -112,5 +134,17 @@
   .modalbutton:nth-of-type(2) {
     /* CSS properties for the second button */
     top: 70px;
+  }
+}
+/* Styles for tablets */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .modalbutton {
+    top: -480px;
+    left: 10px;
+    padding: 10px 10px;
+  }
+  .modalbutton:nth-of-type(2) {
+    /* CSS properties for the second button */
+    top: -460px;
   }
 }

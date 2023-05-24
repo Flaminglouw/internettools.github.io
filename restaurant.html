@@ -96,28 +96,36 @@
     </div>
     <div class="modal-header">
       <div class="title">
+        <h1>Dessert</h1>
+      </div>
+    </div>
+    <div class="modal-body">
+      <h5>Schwarzwälder Kirschtorte <b>4,50 €</b></h5>
+      <h5>Apfelstrudel mit Vanillesauce <b>3,50 €</b></h5>
+      <h5>Bayerische Creme <b>3,00 €</b></h5>
+      <h5>Lebkuchen <b>2,50 €</b></h5>
+      <h5>Mousse au Chocolat<b>4,00 €</b></h5>
+    </div>
+    <div class="modal-header">
+      <div class="title">
         <h1>Getränke</h1>
       </div>
     </div>
     <div class="modal-body">
-      <h5>Toast <b>5$</b></h5>
-    </div>
-    <div class="modal-header">
-      <div class="title">
-        <h1>Starters</h1>
-      </div>
-    </div>
-    <div class="modal-body">
-      <h5>Toast <b>5$</b></h5>
+      <h5>Apfelsaftschorle <b>2,50 €</b></h5>
+      <h5>Weizenbier<b>3,50 €</b></h5>
+      <h5>Schwarzer Tee <b>2,00 €</b></h5>
+      <h5>Berliner Weisse<b>4,00 €</b></h5>
+      <h5>Riesling Wein<b>5,50 €</b></h5>
     </div>
   </div>
-  <div id="overlay"></div>
 
-  <!--------------Resevation----->
 
-  <button class="modalbutton" data-modal-target="#modal">Reservierung</button>
+  <!--------------Resevation---------------------------------------------------------------------------------->
+
+  <button class="modalbutton" data-modal-target="#reservation">Reservierung</button>
   <!--https://www.youtube.com/watch?v=MBaw_6cPmAw  i saw this here on the 23.05.23 23:09-->
-  <div class="modal" id="modal">
+  <div class="modal" id="reservation">
     <div class="modal-header">
       <div class="title">
         <h1>Reservierungsformular</h1>
@@ -125,11 +133,16 @@
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
-      <h5>Suppe des Tages<b>4,50 €</b></h5>
-      <h5>Bruschetta mit frischen Tomaten und Basilikum <b>6,50 €</b></h5>
-      <h5>Kartoffel-Rucola-Salat mit Joghurtdressing<b>7,50 €</b></h5>
-      <h5>Gebratene Champignons mit Knoblauch-Dip<b>5,50 €</b></h5>
-      <h5>Flammkuchen mit Speck und Zwiebeln<b>8,50 €</b></h5>
+      <p>Einen Tisch reservieren, nach dem heutigen Tagesangebot fragen oder uns einfach eine Nachricht schicken:</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="input-1" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="input-1" type="number" placeholder="Wie viele Personen" required name="People"></p>
+        <p><input class="input-1" type="datetime-local" id="dateInput" placeholder="Datum und Zeit" required name="date"
+            value="2020-11-16T20:00"></p>
+        <p><input class="input-1" type="text" placeholder="Nachricht \ Spezielle Anforderungen" required name="Message">
+        </p>
+        <p><button class="input-2" type="submit">Reservierung absenden</button></p>
+      </form>
 
     </div>
 
@@ -155,7 +168,7 @@
 
 
   <script>
-    //This is for small screens to make the menu a Hamburger-button //
+    //This is for small screens to make the menu a Hamburger-button-------- I am leaving this here, for this was how did it before i learned about linking a Javascript //
     function myFunction() {
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav") {
@@ -176,6 +189,8 @@
 
 
   <hr class="topline">
+  <h2 class="greeting">Liebe Gäste, willkommen in unserem Restaurant! Wir laden Sie ein, unsere Leidenschaft für gutes
+    Essen und herzliche Gastfreundschaft zu erleben.</h2>
 
   <div class="blocks-container">
     <div class="Block2">
@@ -201,8 +216,9 @@
       <img src="bookingpic1.png" alt="table" class="block-image">
       <hr>
       <ul>
-        <li class="three"><a href="reservation.html">Jetzt online Tisch reservieren</a></li>
-        <li class="three"><a href="menu.html">Speisekarte</a></li>
+        <li class="three"><a href="#reservation">Jetzt online Tisch reservieren</a></li>
+        <li class="three"><a href="#modal">Speisekarte</a></li>
+
       </ul>
       <hr>
 
