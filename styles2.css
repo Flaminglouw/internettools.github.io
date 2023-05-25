@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
@@ -65,8 +65,7 @@
   display: block;
   width: 300px;
 }
-.input-2 {
-}
+
 .modal-body h5 {
   margin: 0;
   width: 100%; /* Adjust the width as per your preference */
@@ -119,32 +118,96 @@
   /* CSS properties for the second button */
   top: -760px;
 }
-
-/*media for smartphones*/
-@media screen and (max-width: 600px) {
+/*Piece of shit like the Galaxy Fold-----------remove the this later*/
+@media screen and (max-width: 280px) {
   .modalbutton {
-    top: 25px; /* Move the button 10 pixels down */
-    left: 10px;
+    top: 103px; /* Move the button 10 pixels down */
+    left: 12px;
     position: fixed;
-    padding: 8px 8px;
+    padding: 2px 2px;
     background-color: #d9d9d9;
     border-radius: 10px;
     z-index: 14;
+    width: 110px;
   }
   .modalbutton:nth-of-type(2) {
     /* CSS properties for the second button */
-    top: 70px;
+    top: 103px;
+    left: 150px;
+  }
+  .modal {
+    top: 65%;
+    max-width: 100%;
+  }
+  .modal-header {
+    width: 110%;
+  }
+}
+/*media for smartphones*/
+@media screen and (max-width: 480px) and (min-width: 281px) {
+  .modalbutton {
+    top: 15px; /* Move the button 10 pixels down */
+    left: 3px;
+    position: fixed;
+    padding: 4px 4px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    z-index: 14;
+    width: 110px;
+  }
+  .modalbutton:nth-of-type(2) {
+    /* CSS properties for the second button */
+    top: 50px;
+  }
+  .modal {
+    top: 60%;
+    max-width: 95%;
   }
 }
 /* Styles for tablets */
-@media (min-width: 601px) and (max-width: 1200px) {
+@media screen and (max-width: 821px) and (min-width: 481px) {
   .modalbutton {
-    top: -480px;
+    top: 30px; /* Move the button 10 pixels down */
+    left: 10px;
+    position: fixed;
+    padding: 10px 10px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    z-index: 14;
+    width: 120px;
+  }
+  .modalbutton:nth-of-type(2) {
+    /* CSS properties for the second button */
+    top: 80px;
+  }
+}
+/* Styles for bigger tablets */
+@media screen and (max-width: 1024px) and (min-width: 822px) {
+  .modalbutton {
+    top: -470px; /* Move the button 10 pixels down */
     left: 10px;
     padding: 10px 10px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    width: 120px;
   }
   .modalbutton:nth-of-type(2) {
     /* CSS properties for the second button */
     top: -460px;
+  }
+}
+/* Even more bigger... */
+@media screen and (max-width: 1300px) and (min-width: 1025px) {
+  .modalbutton {
+    top: -670px; /* Move the button 10 pixels down */
+    left: 10px;
+    padding: 10px 10px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    width: 120px;
+  }
+  .modalbutton:nth-of-type(2) {
+    /* CSS properties for the second button */
+    top: -665px;
   }
 }

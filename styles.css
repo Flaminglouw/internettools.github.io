@@ -8,14 +8,14 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: 100%;
-  padding-left: 70px; /* At the moment I am not sure why the logo and the body's logo dont align*/
+  padding-left: 80px; /* At the moment I am not sure why the logo and the body's logo dont align*/
   max-height: 100px;
   z-index: 13; /* I asked chat GPT how can i make that my button, slides under my topnav menu. Date 23.05.23 17:13*/
   border: 1px solid black;
   font-weight: bold;
   font-family: Georgia, "Times New Roman", Times, serif; /* I was searching for Tex Gyre Termes, but find this works also*/
   top: 0;
+  width: 100%;
 }
 
 .topnav a {
@@ -43,10 +43,20 @@
   right: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
   .topnav {
     padding: 0;
     max-height: 600px; /* this keeps the button menu visable... */
+    position: fixed;
   }
   .topnav a:not(:nth-child(3)) {
     /*The media query is used to hide all the a elements except the first one using the :not(:nth-child(1)) selector.//source chatGPT//*/
@@ -76,6 +86,62 @@
     /*The .topnav.responsive a selector is used to make the links display as blocks for the vertical layout//source chatGPT//*/
     float: none;
     display: block;
+  }
+}
+@media screen and (max-width: 821px) and (min-width: 481px) {
+  html,
+  body {
+    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .topnav {
+    padding: 0;
+    max-height: 600px; /* this keeps the button menu visable... */
+    position: fixed;
+  }
+  .topnav a:not(:nth-child(3)) {
+    /*The media query is used to hide all the a elements except the first one using the :not(:nth-child(1)) selector.//source chatGPT//*/
+    display: none;
+    text-align: center;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    /*The .topnav.responsive class is used to target the responsive behavior.//source chatGPT//*/
+    flex-direction: column;
+    align-items: flex;
+    position: fixed;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    /*The .topnav.responsive a selector is used to make the links display as blocks for the vertical layout//source chatGPT//*/
+    float: none;
+    display: block;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 822px) {
+  html,
+  body {
+    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
 }
 .hotellogo {
@@ -205,133 +271,127 @@
 
 body {
   margin: 0;
-  background: radial-gradient(black, silver);
+  background: radial-gradient(black, #c0c0c0);
+  background-repeat: no-repeat;
   font-family: Georgia, "Times New Roman", Times, sans-serif;
-}
-h1 {
-  font-size: 40px;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-h1,
-h2,
-p {
-  text-align: center;
-  color: #ededed;
-}
-/*.logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: auto; /* Adjust the max-height as needed */
-/*padding: 100px;
-}*/
-@media screen and (max-width: 600px) {
-  .logo {
-    max-width: auto; /* Adjust the max-width as needed for smartphones */
-    height: auto;
-    display: block;
-    max-height: auto; /* Adjust the max-height as needed for smartphones */
-    padding: 0;
-    padding-top: 120px;
-  }
+  width: 100%;
+  padding: 0;
 }
 
 /*---------------------------------Restaurant----------------------------*/
 
 .greeting {
   text-align: center;
-  font-size: 18px;
-  margin-bottom: 10px;
-  margin-top: -50px;
+  font-size: 25px;
+  padding-bottom: 60px;
+  color: white;
 }
 .topline {
-  border: none;
-  border-top: 2px solid #f8f3f3ad;
-  margin-bottom: 20px;
+  border: 2px solid #ededed;
 }
 .blocks-container {
+  max-width: 1800px;
+  text-align: center;
+  margin: auto;
+  border: 3px solid black;
+  border-radius: 5px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.Block2,
-.Block3,
-.Block4 {
-  flex-basis: 100%;
+  flex-wrap: nowrap;
   background-color: black;
 }
-ul {
+
+.picture-section,
+.opening-times-section,
+.picture-section-2,
+.directions-section {
+  flex-grow: 1;
+}
+
+.picture-section img,
+.picture-section-2 img {
+  max-width: 100%;
+  height: auto;
+}
+.opening-times-section,
+.directions-section {
+  flex-basis: 25%;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.opening-times-section {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.opening-times-section h2 {
+  margin-top: 0;
+}
+
+.opening-times-section ul {
   list-style: none;
   padding: 0;
-  color: #ededed;
-  height: 3cm;
 }
 
-li {
-  display: flex;
-  justify-content: space-between;
-}
-.three {
-  margin-left: 20%;
+.opening-times-section li {
+  margin-bottom: 5px;
 }
 
-.weekday {
-  text-align: left;
-  margin-left: 20%;
+.opening-times-section .weekday {
+  font-weight: bold;
 }
 
-.hours {
-  text-align: right;
-  margin-right: 15%;
+.directions-section {
+  background-color: black;
+  color: white;
 }
 
-.block-image {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  height: 150px;
+.directions-section h2 {
+  color: white;
+  margin-top: 0;
 }
 
-.Block2,
-.Block3,
-.Block4 {
-  text-align: center;
-  width: 30%;
-  max-width: 300px;
+.directions-section p {
+  margin-bottom: 10px;
 }
-@media screen and (max-width: 600px) {
+
+.directions-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.directions-section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
   .greeting {
-    margin: 5px;
-    padding-top: 60px;
+    font-size: 15px;
+    padding: 20px;
   }
 
-  h1 {
-    font-size: 24px;
+  .blocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  .SDH,
-  .Vorspeise,
-  .hauptspeise,
-  .Getränke,
-  .Nachtisch {
-    width: 100%;
-  }
-
-  .item p {
-    font-size: 16px;
-  }
-
-  .Block2,
-  .Block3,
-  .Block4 {
+  .blocks-container > div {
+    flex-basis: 100%;
     max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .picture-section img,
+  .picture-section-2 img {
+    max-width: 100%;
+    height: auto;
+    transform: rotate(90deg);
   }
 }
 
@@ -362,36 +422,3 @@ ol {
   border-top: 1px solid #fff;
   margin: 20px 0;
 }
-
-/*---------------------------------Speisekarte---------------------------*/
-/*.menu {
-  border: 10px solid gold;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
-  color: #ededed;
-  padding-top: 100px;
-}
-.SDH,
-.Vorspeise,
-.hauptspeise,
-.Getränke,
-.Nachtisch {
-  text-align: left;
-  width: 75%;
-}
-
-.item p {
-  display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 18px;
-  width: 75%;
-  margin: 10px;
-}
-
-.price {
-  text-align: right;
-  width: 25%;
-}*/

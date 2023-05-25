@@ -45,3 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const formattedDate = currentDate.toISOString().slice(0, 16);
   dateInput.value = formattedDate;
 });
+//Top Nav menu
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className.indexOf("responsive") === -1) {
+    x.className += " responsive";
+  } else {
+    x.className = x.className.replace(" responsive", "");
+  }
+}
