@@ -148,7 +148,7 @@
   max-height: 100px;
 }
 
-/*-----------------Homepage-slides---------------------*/
+/*------------------------------------Homepage-slides----------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Slideshow container */
 .slideshow-container {
@@ -198,7 +198,7 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text ------ at the moment i have comment this out*/
+/* Caption text ------ at the moment i have comment this out in the HTML file*/
 .text {
   color: black;
   font-size: 20px;
@@ -210,7 +210,7 @@
   margin-left: 600px;
 }
 
-/* Number text (1/3 etc)------- at the moment i have comment this out */
+/* Number text (1/3 etc)------- at the moment i have comment this out in the HTML file */
 .numbertext {
   color: #db1919;
   font-size: 12px;
@@ -260,7 +260,7 @@
   }
 }
 .slideshow-container {
-  margin-top: 130px;
+  margin-top: 140px;
 }
 .mySlides img {
   width: 100%;
