@@ -154,7 +154,7 @@
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  top: -40px;
+  top: -75px;
   margin: auto;
 
   /*Slideshow img control*/
@@ -242,7 +242,7 @@
   top: 0;
 }
 .dots-container {
-  margin-top: -50px;
+  margin-top: -85px;
 }
 /* The dots/bullets/indicators */
 .dot {
