@@ -180,7 +180,7 @@
   top: 0;
   left: 0;
   z-index: 2;
-  animation: delayedAppear 8s forwards;
+  animation: delayedAppear 8.5s forwards; /* AFter getting beter at CSS I got learned this today:https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay?retiredLocale=de 31.05.23 15:42 */
 }
 
 @keyframes delayedAppear {
