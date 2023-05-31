@@ -42,8 +42,14 @@ function showSlides(n) {
 
 // Automatic slideshow
 setInterval(function () {
-  plusSlides(1);
-}, 5000); // Change slide every 5 seconds (adjust the duration as needed)
+  if (slideIndex === document.getElementsByClassName("mySlides").length) {
+    setTimeout(function () {
+      plusSlides(1);
+    }, 10000); // Show last slide for 10 seconds
+  } else {
+    plusSlides(1);
+  }
+}, 4500); // Change slide every 3 seconds
 
 // Menu of the restaurant Modul script//
 const openModalButtons = document.querySelectorAll(".modalbutton");
