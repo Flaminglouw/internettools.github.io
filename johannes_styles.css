@@ -613,9 +613,7 @@ h1 {
 }
 
 /*------------------------Footer------------------------------*/
-a {
-  color: #ffd103;
-}
+
 ol {
   list-style: none;
   padding: 0;
@@ -638,4 +636,68 @@ ol {
 .content-line {
   border-top: 1px solid #fff;
   margin: 20px 0;
+}
+
+/* checkin and checkout */
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.input-group {
+  display: inline;
+  width: 300px;
+}
+.input-label {
+  display: block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  position: relative;
+  top: -16px;
+  left: 0;
+  cursor: pointer;
+  color: black;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 135px;
+  background-color: #d9d9d9;
+}
+.input-label {
+  text-align: center;
+}
+.options,
+.input {
+  width: 100%;
+}
+.btn:hover {
+  background-color: #717717;
+  text-decoration: none !important; /*I ask ChatGPT 31.05.23 13:00 how can i remove the underline under the word Suche */
+}
+.btn-search {
+  color: black;
+}
+@media screen and (max-width: 480px) and (min-width: 281px) {
+  .btn {
+    top: 20px; /* Move the button 10 pixels down */
+    left: 100px;
+    position: relative;
+    padding: 10px 10px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+  }
+  .input-label {
+    text-align: center;
+  }
+  .options,
+  input {
+    width: 100%;
+  }
 }
