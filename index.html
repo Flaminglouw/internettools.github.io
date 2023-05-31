@@ -12,7 +12,6 @@
   <!-- I saw this here* and my own link * <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
 </head>
 
-
 <body>
   <!--Navigation Menu-->
   <nav class="topnav" id="myTopnav">
@@ -26,55 +25,42 @@
       <i class="fa fa-bars"></i>
     </a>
   </nav>
-
   <!-- Slideshow container -->
   <div class="slideshow-container">
-
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext"><!--can add number here--></div>
-      <img src="1.png">
+      <img src="10.png">
       <div class="text"><!--can add Caption here--></div>
     </div>
-
     <div class="mySlides fade">
       <div class="numbertext"></div>
       <img src="2.png">
       <div class="text"></div>
     </div>
-
-
-
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="10.png">
-      <div class="text"></div>
-    </div>
-
     <div class="mySlides fade">
       <div class="numbertext"></div>
       <img src="11.png">
       <div class="text"></div>
     </div>
-
-
-
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="1.png" class="base-inmage">
+      <img src="12.png" class="overlay-image">
+      <div class="text"></div>
+    </div>
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
-
   <!-- The dots/circles -->
-  <div style="text-align:center">
+  <div style="text-align:center" class="dots-container">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
-
   </div>
-
-
   <!-- Checkin Checkout section  -->
   <section class="booking">
     <div class="container">
@@ -111,6 +97,7 @@
           </select>
         </fieldset>
         <button type="submit" class="btn" onclick="window.open('another-page.html', '_blank')">Suche</button>
+        <!--Ask chatgpt how can I a page to a button-->
 
 
 

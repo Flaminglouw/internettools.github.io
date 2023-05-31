@@ -11,7 +11,8 @@
   padding-left: 80px; /* At the moment I am not sure why the logo and the body's logo dont align*/
   max-height: 100px;
   z-index: 13; /* I asked chat GPT how can i make that my button, slides under my topnav menu. Date 23.05.23 17:13*/
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   font-weight: bold;
   font-family: Georgia, "Times New Roman", Times, serif; /* I was searching for Tex Gyre Termes, but find this works also*/
   top: 0;
@@ -148,15 +149,13 @@
   max-height: 100px;
 }
 
-/*------------------------------------Homepage-slides----------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------Homepage-slides----------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1800px;
   position: relative;
+  top: -40px;
   margin: auto;
-  border: 3px solid black;
-  border-radius: 5px;
 
   /*Slideshow img control*/
 }
@@ -166,7 +165,31 @@
   border-radius: 5px; /* Add a border-radius for rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
   display: block; /* the border of the container and img had a gap. I ask chat GPT what is wrong with my code. 24.05.23 16:53 */
-  max-height: 750px;
+  max-height: 800px;
+}
+/* Overlay on the last img */
+.base-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  animation: delayedAppear 8s forwards;
+}
+
+@keyframes delayedAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Next & previous buttons */
@@ -218,7 +241,9 @@
   position: absolute;
   top: 0;
 }
-
+.dots-container {
+  margin-top: -50px;
+}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -260,7 +285,7 @@
   }
 }
 .slideshow-container {
-  margin-top: 140px;
+  margin-top: 175px;
 }
 .mySlides img {
   width: 100%;
