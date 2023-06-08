@@ -41,15 +41,22 @@ function showSlides(n) {
 }
 
 // Automatic slideshow
-setInterval(function () {
-  if (slideIndex === document.getElementsByClassName("mySlides").length) {
-    setTimeout(function () {
+function startSlideshow() {
+  setInterval(function () {
+    if (slideIndex === document.getElementsByClassName("mySlides").length) {
+      setTimeout(function () {
+        plusSlides(1);
+      }, 10000); // Show last slide for 10 seconds
+    } else {
       plusSlides(1);
-    }, 10000); // Show last slide for 10 seconds
-  } else {
-    plusSlides(1);
-  }
-}, 4500); // Change slide every 3 seconds
+    }
+  }, 4000); // Change slide every 4 seconds
+}
+
+// Delay the start of the slideshow for the first slide
+setTimeout(function () {
+  startSlideshow();
+}, 6000); // Start the slideshow after 6 seconds
 
 // Menu of the restaurant Modul script//
 const openModalButtons = document.querySelectorAll(".modalbutton");

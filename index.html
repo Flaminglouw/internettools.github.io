@@ -18,35 +18,37 @@
     <!--https://www.w3schools.com/howto/howto_css_fixed_menu.asp, https://www.w3schools.com/howto/howto_css_topnav_centered.asp I used this to build the Fixed Menu-->
     <a href="Todo.html">Über uns</a>
     <a href="Hayat.html">Zimmer</a>
-    <a href="index.html" class="active1"><img src="logohotel5a.png" alt="Hotellogo" class="hotellogo"></a>
+    <a href="index.html"><img src="logohotel5a.png" alt="Hotel logo" class="hotellogo"></a>
     <a href="restaurant.html">Restaurant</a>
     <a href="tim.html">Sehenswürdigkeiten</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
   </nav>
+  <!-- Slideshow -->
+  <!-- source that i used to help my build the slides. https://www.w3schools.com/howto/howto_js_slideshow.asp  -->
   <!-- Slideshow container -->
   <div class="slideshow-container">
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext"><!--can add number here--></div>
-      <img src="10.png">
+      <img src="10.png" alt="View of the mountains from the swimmingpool">
       <div class="text"><!--can add Caption here--></div>
     </div>
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="2.png">
+      <img src="2.png" alt="two people relaxing on chairs next to the beach">
       <div class="text"></div>
     </div>
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="11.png">
+      <img src="11.png" alt="chairs under grass embrella view of the beach">
       <div class="text"></div>
     </div>
     <div class="mySlides fade">
       <div class="numbertext"></div>
-      <img src="1.png" class="base-inmage">
-      <img src="12.png" class="overlay-image">
+      <img src="1.png" class="base-inmage" alt="hotel logo images grey background">
+      <img src="12.png" class="overlay-image" alt="hotel logo images black background">
       <div class="text"></div>
     </div>
     <!-- Next and previous buttons -->
@@ -62,16 +64,16 @@
     <span class="dot" onclick="currentSlide(4)"></span>
   </div>
   <!-- Checkin Checkout section  -->
-  <section class="booking">
+  <div class="booking"> <!--was <section> however validator showed me i need a h2-h6 element-->
     <div class="container">
-      <form action="" class="form">
+      <form action="#" class="form">
         <fieldset class="input-group">
-          <label for="destination" class="input-label">Check In</label>
+          <label for="Check-in" class="input-label">Check In</label>
           <input type="date" class="input" id="check-in">
 
         </fieldset>
         <fieldset class="input-group">
-          <label for="destination" class="input-label">Check Out</label>
+          <label for="check-out" class="input-label">Check Out</label>
           <input type="date" class="input" id="check-out">
         </fieldset>
         <fieldset class="input-group">
@@ -97,21 +99,14 @@
           </select>
         </fieldset>
         <button type="submit" class="btn" onclick="window.open('another-page.html', '_blank')">Suche</button>
-        <!--Ask chatgpt how can I a page to a button-->
-
-
-
-        </button>
+        <!--Ask chatgpt how can I a page/link into a button-->
       </form>
     </div>
-  </section>
+  </div>
 
 
 
 
 </body>
-<footer>
-
-</footer>
 
 </html>
