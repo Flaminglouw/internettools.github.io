@@ -12,7 +12,6 @@
   <!-- I saw this here* and my own link * <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
 </head>
 
-
 <body>
   <!--Navigation Menu-->
   <nav class="topnav" Id="myTopnav">
@@ -27,15 +26,14 @@
     </a>
   </nav>
 
-
   <!-- Slideshow container -->
   <div class="slideshow-container">
-
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
       <div class="numbertext"></div>
       <img src="5-2.gif" alt="Restaurant logo"><!-- Img 4 was build in Canva -->
-      <div class="text"></div>
+      <div class="text">
+      </div>
     </div>
 
     <div class="mySlides fade">
@@ -67,14 +65,45 @@
   <br>
 
   <!-- The dots/circles -->
-  <div style="text-align:center" class="dots-container">
+  <div class="dots-container">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
     <span class="dot" onclick="currentSlide(5)"></span>
   </div>
+  <!--Info and Place Container-->
+  <section class="greeting-container">
+    <h2 class="greeting">Liebe Gäste, willkommen in unserem Restaurant! Wir laden Sie ein, unsere Leidenschaft für gutes
+      Essen und herzliche Gastfreundschaft zu erleben.</h2>
+  </section>
+  <div class="blocks-container">
+    <div class="picture-section">
+      <img src="12.jpg" alt="Cherries Image">
+    </div>
+    <div class="opening-times-section">
+      <h2>Öffnungszeiten</h2>
+      <ul>
+        <li><span class="weekday">Montag</span><span class="hours">11:00 bis 22:00</span></li>
+        <li><span class="weekday">Dienstag</span><span class="hours">11:00 bis 22:00</span></li>
+        <li><span class="weekday">Mittwoch</span><span class="hours">11:00 bis 22:00</span></li>
+        <li><span class="weekday">Donnerstag</span><span class="hours">11:00 bis 22:00</span></li>
+        <li><span class="weekday">Freitag</span><span class="hours">11:00 bis 22:00</span></li>
+        <li><span class="weekday">Samstag</span><span class="hours">11:00 bis 23:00</span></li>
+        <li><span class="weekday">Sonntag</span><span class="hours">11:00 bis 23:00</span></li>
+      </ul>
 
+    </div>
+
+    <div class="directions-section">
+      <h2>So Finden Sie uns</h2>
+      <p><a
+          href="https://www.google.com/maps/place/Frankfurt+University+of+Applied+Sciences/@50.1304923,8.6903215,17z/data=!3m1!4b1!4m6!3m5!1s0x47bd0ec720c4d695:0x2fd6b25adf3bf545!8m2!3d50.1304923!4d8.6925102!16s%2Fm%2F02qbs24?entry=ttu">Am
+          Fra-uas 123, Frankfurt am Main</a></p>
+      <p><a href="tel:0123456789">Tel:0123456789</a></p>
+      <p><a href="mailto:internettools@gmail.de">Internettools@gmail.de</a></p>
+    </div>
+  </div>
   <!--Modal Menu Button-->
   <button class="modalbutton" data-modal-target="#modal">Speisekarte</button>
   <!--https://www.youtube.com/watch?v=MBaw_6cPmAw  i saw this here on the 23.05.23 23:09-->
@@ -130,10 +159,7 @@
       <h5>Riesling Wein<b>5,50 €</b></h5>
     </div>
   </div>
-
-
   <!--Modal Resevation Button-->
-
   <button class="modalbutton" data-modal-target="#reservation">Reservierung</button>
   <!--https://www.youtube.com/watch?v=MBaw_6cPmAw  i saw this here on the 23.05.23 23:09-->
   <div class="modal" id="reservation">
@@ -154,48 +180,9 @@
         </p>
         <p><button class="input-2" type="submit">Reservierung absenden</button></p>
       </form>
-
     </div>
-
   </div>
   <div id="overlay"></div>
-
-  <!--Info and Place Container-->
-  <hr class="topline">
-  <h2 class="greeting">Liebe Gäste, willkommen in unserem Restaurant! Wir laden Sie ein, unsere Leidenschaft für gutes
-    Essen und herzliche Gastfreundschaft zu erleben.</h2>
-  <hr class="topline">
-
-  <div class="blocks-container">
-    <div class="picture-section">
-      <img src="8.png" alt="Cherries Image">
-    </div>
-    <div class="opening-times-section">
-      <h2>Öffnungszeiten</h2>
-      <ul>
-        <li><span class="weekday">Montag</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Dienstag</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Mittwoch</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Donnerstag</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Freitag</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Samstag</span><span class="hours">11:00 bis 23:00</span></li>
-        <li><span class="weekday">Sonntag</span><span class="hours">11:00 bis 23:00</span></li>
-      </ul>
-
-    </div>
-
-    <div class="directions-section">
-      <h2>So Finden Sie uns</h2>
-      <p><a
-          href="https://www.google.com/maps/place/Frankfurt+University+of+Applied+Sciences/@50.1304923,8.6903215,17z/data=!3m1!4b1!4m6!3m5!1s0x47bd0ec720c4d695:0x2fd6b25adf3bf545!8m2!3d50.1304923!4d8.6925102!16s%2Fm%2F02qbs24?entry=ttu">Am
-          Fra-uas 123, Frankfurt am Main</a></p>
-      <p><a href="tel:0123456789">Tel:0123456789</a></p>
-      <p><a href="mailto:internettools@gmail.de">Internettools@gmail.de</a></p>
-    </div>
-    <div class="picture-section-2">
-      <img src="8.png" alt="cherry picture">
-    </div>
-  </div>
 </body>
 
 </html>
