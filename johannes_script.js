@@ -1,4 +1,4 @@
-//Top Nav menu
+//Top Nav menu//
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className.indexOf("responsive") === -1) {
