@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- freecodecamp.org i saw that there-->
   <title>Hotel Internettools Homepage</title>
   <link rel="stylesheet" type="text/css" href="johannes_styles.css">
-  <script defer src="johannes_script.js"></script>
+
   <!--Icon Library-->
   <script src="https://kit.fontawesome.com/ab21408051.js" crossorigin="anonymous"></script>
   <!-- I saw this here* and my own link * <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
@@ -25,164 +25,236 @@
       <i class="fa fa-bars"></i>
     </a>
   </nav>
+  <main>
+    <!--Modal Menu Button-->
+    <button class="modalbutton" data-modal-target="#modal">Menü</button>
+    <!--Modal Resevation Button-->
+    <button class="modalbutton" data-modal-target="#reservation">Buchung</button>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="5-2.gif" alt="Restaurant logo"><!-- Img 4 was build in Canva -->
+        <div class="text">
+        </div>
+      </div>
 
-  <!-- Slideshow container -->
-  <div class="slideshow-container">
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="5-2.gif" alt="Restaurant logo"><!-- Img 4 was build in Canva -->
-      <div class="text">
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="6.jpg" alt="A brown table with plates and food on the plates">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="7.jpg" alt="table with plates of food and wine glasses">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="8.jpg" alt="pizza with tomato and cheese">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="9.jpg" alt="brown table wine glasses in side of the Restaurant">
+        <div class="text"></div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <!--Info and Place Container-->
+    <div class="blocks-container">
+      <div class="picture-section">
+        <img src="16.jpg" class="base-image2" alt="hotel logo images grey background">
+        <img src="15.jpg" class="overlay-image2" alt="hotel logo images black background">
+      </div>
+
+      <div class="fly">
+        <div class=" text-section">
+          <section class="greeting-container">
+            <h2>Willkommen zum Internettools</h2>
+            <p class="greeting">Liebe Gäste, willkommen in unserem Restaurant! Wir laden Sie ein, unsere Leidenschaft
+              für
+              gutes
+              Essen und herzliche Gastfreundschaft zu erleben.</p>
+          </section>
+          <section class="opening-times-section">
+            <h2>Öffnungszeiten</h2>
+            <ul>
+              <li><span class="weekday">Montag</span><span class="hours">11:00 bis 22:00</span></li>
+              <li><span class="weekday">Dienstag</span> <span class="hours">11:00 bis 22:00</span></li>
+              <li><span class="weekday">Mittwoch</span> <span class="hours">11:00 bis 22:00</span></li>
+              <li><span class="weekday">Donnerstag</span> <span class="hours">11:00 bis 22:00</span></li>
+              <li><span class="weekday">Freitag</span> <span class="hours">11:00 bis 22:00</span></li>
+              <li><span class="weekday">Samstag</span> <span class="hours">11:00 bis 23:00</span></li>
+              <li><span class="weekday">Sonntag</span> <span class="hours">11:00 bis 23:00</span></li>
+            </ul>
+          </section>
+          <section class="directions-section">
+            <h2>So Finden Sie uns</h2>
+            <p><a
+                href="https://www.google.com/maps/place/Frankfurt+University+of+Applied+Sciences/@50.1304923,8.6903215,17z/data=!3m1!4b1!4m6!3m5!1s0x47bd0ec720c4d695:0x2fd6b25adf3bf545!8m2!3d50.1304923!4d8.6925102!16s%2Fm%2F02qbs24?entry=ttu">Am
+                Fra-uas 123, Frankfurt am Main</a></p>
+            <p><a href="tel:0123456789">Tel:0123456789</a></p>
+            <p><a href="mailto:internettools@gmail.de">Internettools@gmail.de</a></p>
+          </section>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <!--https://www.youtube.com/watch?v=MBaw_6cPmAw  i saw this here on the 23.05.23 23:09-->
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">
+          <h1>Vorspeisen</h1>
+        </div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h5>Suppe des Tages<b>4,50 €</b></h5>
+        <h5>Bruschetta mit frischen Tomaten und Basilikum <b>6,50 €</b></h5>
+        <h5>Kartoffel-Rucola-Salat mit Joghurtdressing<b>7,50 €</b></h5>
+        <h5>Gebratene Champignons mit Knoblauch-Dip<b>5,50 €</b></h5>
+        <h5>Flammkuchen mit Speck und Zwiebeln<b>8,50 €</b></h5>
+
+      </div>
+      <div class="modal-header">
+        <div class="title">
+          <h1>Hauptspeisen</h1>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h5>Wiener Schnitzel mit Pommes frites<b>15,00 €</b></h5>
+        <h5>Rinderfilet mit Bratkartoffeln und grünen Bohnen <b>22,00 €</b></h5>
+        <h5>Sauerbraten mit Rotkohl und Kartoffelklößen<b>16,50 €</b></h5>
+        <h5>Spätzle mit Rahmsauce und Pilzen (vegetarisch) <b>12,00 €</b></h5>
+        <h5>Schweinshaxe mit Sauerkraut und Kartoffelpüree<b>18,00 €</b></h5>
+      </div>
+      <div class="modal-header">
+        <div class="title">
+          <h1>Dessert</h1>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h5>Schwarzwälder Kirschtorte <b>4,50 €</b></h5>
+        <h5>Apfelstrudel mit Vanillesauce <b>3,50 €</b></h5>
+        <h5>Bayerische Creme <b>3,00 €</b></h5>
+        <h5>Lebkuchen <b>2,50 €</b></h5>
+        <h5>Mousse au Chocolat<b>4,00 €</b></h5>
+      </div>
+      <div class="modal-header">
+        <div class="title">
+          <h1>Getränke</h1>
+        </div>
+      </div>
+      <div class="modal-body">
+        <h5>Apfelsaftschorle <b>2,50 €</b></h5>
+        <h5>Weizenbier<b>3,50 €</b></h5>
+        <h5>Schwarzer Tee <b>2,00 €</b></h5>
+        <h5>Berliner Weisse<b>4,00 €</b></h5>
+        <h5>Riesling Wein<b>5,50 €</b></h5>
       </div>
     </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="6.jpg" alt="A brown table with plates and food on the plates">
-      <div class="text"></div>
-    </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="7.jpg" alt="table with plates of food and wine glasses">
-      <div class="text"></div>
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="8.jpg" alt="pizza with tomato and cheese">
-      <div class="text"></div>
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext"></div>
-      <img src="9.jpg" alt="brown table wine glasses in side of the Restaurant">
-      <div class="text"></div>
-    </div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-
-  <!-- The dots/circles -->
-  <div class="dots-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-  </div>
-  <!--Info and Place Container-->
-  <section class="greeting-container">
-    <h2 class="greeting">Liebe Gäste, willkommen in unserem Restaurant! Wir laden Sie ein, unsere Leidenschaft für gutes
-      Essen und herzliche Gastfreundschaft zu erleben.</h2>
-  </section>
-  <div class="blocks-container">
-    <div class="picture-section">
-      <img src="12.jpg" alt="Cherries Image">
-    </div>
-    <div class="opening-times-section">
-      <h2>Öffnungszeiten</h2>
-      <ul>
-        <li><span class="weekday">Montag</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Dienstag</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Mittwoch</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Donnerstag</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Freitag</span><span class="hours">11:00 bis 22:00</span></li>
-        <li><span class="weekday">Samstag</span><span class="hours">11:00 bis 23:00</span></li>
-        <li><span class="weekday">Sonntag</span><span class="hours">11:00 bis 23:00</span></li>
-      </ul>
-
-    </div>
-
-    <div class="directions-section">
-      <h2>So Finden Sie uns</h2>
-      <p><a
-          href="https://www.google.com/maps/place/Frankfurt+University+of+Applied+Sciences/@50.1304923,8.6903215,17z/data=!3m1!4b1!4m6!3m5!1s0x47bd0ec720c4d695:0x2fd6b25adf3bf545!8m2!3d50.1304923!4d8.6925102!16s%2Fm%2F02qbs24?entry=ttu">Am
-          Fra-uas 123, Frankfurt am Main</a></p>
-      <p><a href="tel:0123456789">Tel:0123456789</a></p>
-      <p><a href="mailto:internettools@gmail.de">Internettools@gmail.de</a></p>
-    </div>
-  </div>
-  <!--Modal Menu Button-->
-  <button class="modalbutton" data-modal-target="#modal">Speisekarte</button>
-  <!--https://www.youtube.com/watch?v=MBaw_6cPmAw  i saw this here on the 23.05.23 23:09-->
-  <div class="modal" id="modal">
-    <div class="modal-header">
-      <div class="title">
-        <h1>Vorspeisen</h1>
+    <!--https://www.youtube.com/watch?v=MBaw_6cPmAw  i saw this here on the 23.05.23 23:09-->
+    <div class="modal" id="reservation">
+      <div class="modal-header">
+        <div class="title">
+          <h1>Reservierungsformular</h1>
+        </div>
+        <button data-close-button class="close-button">&times;</button>
       </div>
-      <button data-close-button class="close-button">&times;</button>
-    </div>
-    <div class="modal-body">
-      <h5>Suppe des Tages<b>4,50 €</b></h5>
-      <h5>Bruschetta mit frischen Tomaten und Basilikum <b>6,50 €</b></h5>
-      <h5>Kartoffel-Rucola-Salat mit Joghurtdressing<b>7,50 €</b></h5>
-      <h5>Gebratene Champignons mit Knoblauch-Dip<b>5,50 €</b></h5>
-      <h5>Flammkuchen mit Speck und Zwiebeln<b>8,50 €</b></h5>
-
-    </div>
-    <div class="modal-header">
-      <div class="title">
-        <h1>Hauptspeisen</h1>
-      </div>
-    </div>
-    <div class="modal-body">
-      <h5>Wiener Schnitzel mit Pommes frites<b>15,00 €</b></h5>
-      <h5>Rinderfilet mit Bratkartoffeln und grünen Bohnen <b>22,00 €</b></h5>
-      <h5>Sauerbraten mit Rotkohl und Kartoffelklößen<b>16,50 €</b></h5>
-      <h5>Spätzle mit Rahmsauce und Pilzen (vegetarisch) <b>12,00 €</b></h5>
-      <h5>Schweinshaxe mit Sauerkraut und Kartoffelpüree<b>18,00 €</b></h5>
-    </div>
-    <div class="modal-header">
-      <div class="title">
-        <h1>Dessert</h1>
-      </div>
-    </div>
-    <div class="modal-body">
-      <h5>Schwarzwälder Kirschtorte <b>4,50 €</b></h5>
-      <h5>Apfelstrudel mit Vanillesauce <b>3,50 €</b></h5>
-      <h5>Bayerische Creme <b>3,00 €</b></h5>
-      <h5>Lebkuchen <b>2,50 €</b></h5>
-      <h5>Mousse au Chocolat<b>4,00 €</b></h5>
-    </div>
-    <div class="modal-header">
-      <div class="title">
-        <h1>Getränke</h1>
-      </div>
-    </div>
-    <div class="modal-body">
-      <h5>Apfelsaftschorle <b>2,50 €</b></h5>
-      <h5>Weizenbier<b>3,50 €</b></h5>
-      <h5>Schwarzer Tee <b>2,00 €</b></h5>
-      <h5>Berliner Weisse<b>4,00 €</b></h5>
-      <h5>Riesling Wein<b>5,50 €</b></h5>
-    </div>
-  </div>
-  <!--Modal Resevation Button-->
-  <button class="modalbutton" data-modal-target="#reservation">Reservierung</button>
-  <!--https://www.youtube.com/watch?v=MBaw_6cPmAw  i saw this here on the 23.05.23 23:09-->
-  <div class="modal" id="reservation">
-    <div class="modal-header">
-      <div class="title">
-        <h1>Reservierungsformular</h1>
-      </div>
-      <button data-close-button class="close-button">&times;</button>
-    </div>
-    <div class="modal-body">
-      <p>Einen Tisch reservieren, nach dem heutigen Tagesangebot fragen oder uns einfach eine Nachricht schicken:</p>
-      <form action="/action_page.php" target="_blank">
-        <p><input class="input-1" type="text" placeholder="Name" required name="Name"></p>
-        <p><input class="input-1" type="number" placeholder="Wie viele Personen" required name="People"></p>
-        <p><input class="input-1" type="datetime-local" id="dateInput" placeholder="Datum und Zeit" required name="date"
-            value="2020-11-16T20:00"></p>
-        <p><input class="input-1" type="text" placeholder="Nachricht \ Spezielle Anforderungen" required name="Message">
+      <div class="modal-body">
+        <p>Einen Tisch reservieren, nach dem heutigen Tagesangebot fragen oder uns einfach eine Nachricht schicken:
         </p>
-        <p><button class="input-2" type="submit">Reservierung absenden</button></p>
-      </form>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="input-1" type="text" placeholder="Name" required name="Name"></p>
+          <p><input class="input-1" type="number" placeholder="Wie viele Personen" required name="People"></p>
+          <p><input class="input-1" type="datetime-local" id="dateInput" placeholder="Datum und Zeit" required
+              name="date" value="2020-11-16T20:00"></p>
+          <p><input class="input-1" type="text" placeholder="Nachricht \ Spezielle Anforderungen" required
+              name="Message">
+          </p>
+          <p><button class="input-2" type="submit">Reservierung absenden</button></p>
+        </form>
+      </div>
     </div>
-  </div>
-  <div id="overlay"></div>
+    <div id="overlay"></div>
+  </main>
+  <footer>
+    <section class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="contact">
+            <h2>Phone Support</h2>
+            <h3>24 hours a day</h3>
+            <p>+49 1234 567 89</p>
+          </div>
+          <div class="social-media">
+            <h2>Follow Us</h2>
+            <h3>Social Media</h3>
+            <div class="icons-wrapper">
+              <ul>
+                <li>
+                  <a href="">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="newsletter">
+            <h2>Our Newsletter</h2>
+            <h3>Sign up for special offers</h3>
+            <form action="" method="post" class="footer-form">
+              <div class="form-row">
+                <label for="email"></label>
+                <div class="input-group2">
+                  <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                  <button type="submit">Subscribe</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </footer>
+  <script src="johannes_script.js"></script>
 </body>
+
+
+
+
 
 </html>

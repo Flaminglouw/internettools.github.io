@@ -1,6 +1,6 @@
 // Top Nav menu
 function myFunction() {
-  var x = document.getElementById("myTopnav");
+  let x = document.getElementById("myTopnav");
   if (x.className.indexOf("responsive") === -1) {
     x.className += " responsive";
   } else {
@@ -106,3 +106,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const formattedDate = currentDate.toISOString().slice(0, 16);
   dateInput.value = formattedDate;
 });
+
+function isElementInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  var offset = 1000; // Adjust the offset value here
+
+  return (
+    rect.top >= -offset &&
+    rect.left >= -offset &&
+    rect.bottom <=
+      (window.innerHeight + offset ||
+        document.documentElement.clientHeight + offset) &&
+    rect.right <=
+      (window.innerWidth + offset ||
+        document.documentElement.clientWidth + offset)
+  );
+}
+
+// Function to handle the scroll event
+function handleScroll() {
+  var flyContainer = document.querySelector(".fly");
+  if (isElementInViewport(flyContainer)) {
+    setTimeout(function () {
+      flyContainer.classList.add("animate-fly-in");
+    }, 1000); // Add a 1-second delay
+    window.removeEventListener("scroll", handleScroll); // Remove the scroll event listener
+  }
+}
+
+// Add scroll event listener to trigger the animation
+window.addEventListener("scroll", handleScroll);

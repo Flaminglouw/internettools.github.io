@@ -1,4 +1,34 @@
-/*--------------------Top Navigation Bar -------------------------------------------------------------*/
+/* Body */
+html,
+body {
+  margin: 0;
+  background: radial-gradient(black, #c0c0c0);
+  background-repeat: no-repeat;
+  font-family: Georgia, "Times New Roman", Times, sans-serif;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+main {
+  margin-top: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: whitesmoke;
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: url(merriweather-v30-latin-regular.woff2) format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* Top Navigation Bar */
 .topnav {
   /*https://www.w3schools.com/howto/howto_js_topnav_responsive.asp I got help from this webiste */
   overflow: hidden;
@@ -8,14 +38,15 @@
   align-items: center;
   position: fixed;
   padding-left: 80px; /* At the moment I am not sure why the logo and the body's logo dont align*/
-  max-height: 100px;
-  z-index: 13; /* I asked chat GPT how can i make that my button, slides under my topnav menu. Date 23.05.23 17:13*/
+  max-height: 300px;
+  z-index: 99; /* I asked chat GPT how can i make that my button, slides under my topnav menu. Date 23.05.23 17:13*/
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  font-weight: bold;
-  font-family: Georgia, "Times New Roman", Times, serif; /* I was searching for Tex Gyre Termes, but find this works also*/
+  font-weight: 700;
+  font-family: "Merriweather"; /* I was searching for Tex Gyre Termes, but find this works also*/
   top: 0;
   width: 100%;
+  height: 100px;
 }
 
 .topnav a {
@@ -41,119 +72,63 @@
   position: absolute;
   right: 0;
 }
-
-@media screen and (max-width: 480px) {
-  html,
-  body {
-    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  .topnav {
-    padding: 0;
-    max-height: 600px; /* this keeps the button menu visable... */
-    position: fixed;
-  }
-  .topnav a:not(:nth-child(3)) {
-    /*The media query is used to hide all the a elements except the first one using the :not(:nth-child(1)) selector.//source chatGPT//*/
-    display: none;
-    text-align: center;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive {
-    /*The .topnav.responsive class is used to target the responsive behavior.//source chatGPT//*/
-    flex-direction: column;
-    align-items: flex;
-    position: fixed;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    /*The .topnav.responsive a selector is used to make the links display as blocks for the vertical layout//source chatGPT//*/
-    float: none;
-    display: block;
-  }
-}
-@media screen and (max-width: 821px) and (min-width: 481px) {
-  html,
-  body {
-    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  .topnav {
-    padding: 0;
-    max-height: 600px; /* this keeps the button menu visable... */
-    position: fixed;
-  }
-  .topnav a:not(:nth-child(3)) {
-    /*The media query is used to hide all the a elements except the first one using the :not(:nth-child(1)) selector.//source chatGPT//*/
-    display: none;
-    text-align: center;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive {
-    /*The .topnav.responsive class is used to target the responsive behavior.//source chatGPT//*/
-    flex-direction: column;
-    align-items: flex;
-    position: fixed;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    /*The .topnav.responsive a selector is used to make the links display as blocks for the vertical layout//source chatGPT//*/
-    float: none;
-    display: block;
-  }
-}
-@media screen and (max-width: 1024px) and (min-width: 822px) {
-  html,
-  body {
-    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-}
 .hotellogo {
   max-height: 100px;
 }
+@media screen and (max-width: 920px) {
+  html,
+  body {
+    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .topnav {
+    padding: 0;
+    max-height: 320px; /* this keeps the button menu visable... */
+    position: fixed;
+    height: 100px;
+  }
+  .topnav a:not(:nth-child(3)) {
+    /*The media query is used to hide all the a elements except the first one using the :not(:nth-child(1)) selector.//source chatGPT//*/
+    display: none;
+    text-align: center;
+  }
 
-/*---------------------------------------------------------Homepage-slides----------------------------------------------------------------------------------------------------------------------------------*/
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    /*The .topnav.responsive class is used to target the responsive behavior.//source chatGPT//*/
+    flex-direction: column;
+    align-items: flex;
+    position: fixed;
+    height: 320px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    /*The .topnav.responsive a selector is used to make the links display as blocks for the vertical layout//source chatGPT//*/
+    float: none;
+    display: block;
+  }
+}
+/* Homepage-slides */
 /* source that i used to help my build the slides. https://www.w3schools.com/howto/howto_js_slideshow.asp  */
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  top: -75px;
-  margin: auto;
+  top: 0;
+  left: 0;
 
   /*Slideshow img control*/
 }
@@ -163,7 +138,6 @@
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 1); /* Add a shadow give the box a more 3rd feel. source:https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-css-colors-by-building-a-set-of-colored-markers/step-94 */
   display: block; /* the border of the container and img had a gap. I ask chat GPT what is wrong with my code. 24.05.23 16:53 */
-  max-height: 800px;
 }
 /* Overlay on the last img */
 /* Source https://developer.mozilla.org/en-US/docs/Web/CSS/animation */
@@ -219,29 +193,7 @@
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* Caption text ------ at the moment i have comment this out in the HTML file*/
-.text {
-  color: whitesmoke;
-  font-size: 20px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 600px;
-  text-align: center;
-  margin-left: 600px;
-}
-
-/* Number text (1/3 etc)------- at the moment i have comment this out in the HTML file */
-.numbertext {
-  color: #db1919;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 .dots-container {
-  margin-top: -85px;
   text-align: center;
 }
 /* The dots/bullets/indicators */
@@ -255,7 +207,6 @@
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active,
 .dot:hover {
   background-color: #717717;
@@ -277,148 +228,146 @@
 }
 
 /* On smaller screens, decrease text size */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 920px) {
   .prev,
   .next,
   .text {
     font-size: 11px;
   }
 }
-.slideshow-container {
-  margin-top: 175px;
-}
-.mySlides img {
-  width: 100%;
-  height: auto;
-}
-
-/*-------Body----------------*/
-
-body {
-  margin: 0;
-  background: radial-gradient(black, #c0c0c0);
-  background-repeat: no-repeat;
-  font-family: Georgia, "Times New Roman", Times, sans-serif;
-  width: 100%;
-  padding: 0;
-}
-h1 {
-  text-align: center;
-  color: whitesmoke;
-}
-
-/*---------------------------------Restaurant----------------------------*/
-
-.greeting {
-  text-align: center;
-  font-size: 25px;
-  color: whitesmoke;
-}
-
+/* Restaurant part*/
 .blocks-container {
-  text-align: center;
-  margin: auto;
-  border: 3px solid black;
-  border-radius: 5px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   background-color: black;
-  max-height: 400px;
+  height: 555px;
+  border: black solid 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  max-height: 600px;
 }
-
-.picture-section img,
-.picture-section-2 img {
-  max-width: 100%;
-  max-height: 400px;
-  width: 500px;
-}
-.picture-section img {
-  display: block;
-  background-color: blue;
-}
-
 .opening-times-section,
+.greeting-container,
 .directions-section {
-  flex-basis: 25%;
-  max-width: 100%;
-  padding: 10px;
-}
-
-.opening-times-section {
-  background-color: black;
   color: whitesmoke;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 150px;
 }
-
-.opening-times-section h2 {
-  margin-top: 0;
-}
-
-.opening-times-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.opening-times-section li {
-  margin-bottom: 14px;
-}
-
-.opening-times-section .weekday {
-  font-weight: bold;
-}
-
-.directions-section {
-  background-color: black;
-  color: whitesmoke;
-}
-
-.directions-section h2 {
-  color: whitesmoke;
-  margin-top: 0;
-}
-
-.directions-section p {
-  margin-bottom: 10px;
-}
-
 .directions-section a {
   color: whitesmoke;
-  text-decoration: none;
 }
 
-.directions-section a:hover {
-  text-decoration: underline;
+.picture-section {
+  width: 50%;
+  position: relative;
+}
+.base-image2 {
+  z-index: 1;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+.overlay-image2 {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
 }
 
-@media (max-width: 767px) {
-  .greeting {
-    font-size: 15px;
-    padding: 20px;
+@keyframes delayedAppear {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+.delayedAppear {
+  animation-name: delayedAppear;
+  animation-duration: 1s; /* Adjust the duration as needed */
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.text-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.text-section ul {
+  list-style-type: none;
+}
+.opening-times-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.weekday {
+  text-align: left;
+  flex: 1;
+}
+
+.hours {
+  text-align: right;
+  flex: 1;
+  padding-right: 20px;
+}
+.fly {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateX(-100%);
+  max-width: 50%;
+}
+.animate-fly-in {
+  animation-name: flyIn;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@media screen and (max-width: 920px) {
   .blocks-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    padding: 0;
-    box-sizing: border-box;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    max-height: 100%;
+    height: 100%;
   }
-
-  .blocks-container > div {
-    flex-basis: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
+  .opening-times-section,
+  .greeting-container,
+  .directions-section {
+    margin-left: 0;
   }
-
-  .picture-section img,
-  .picture-section-2 img {
-    max-width: 100%;
-    height: auto;
-    transform: rotate(90deg);
+  .picture-section {
+    width: 100%;
+  }
+  .text-section {
+    width: 200%;
+  }
+  .fly {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
+/* modal button and stylings */
 .modal {
   position: fixed;
   top: 55%;
@@ -522,9 +471,9 @@ h1 {
 }
 
 .modalbutton {
-  position: relative;
-  top: -1520px; /* Move the button 10 pixels down */
-  left: 60px;
+  position: absolute;
+  top: 110px; /* Move the button 10 pixels down */
+  left: 10px;
   display: block;
   color: black;
   text-align: center;
@@ -538,7 +487,7 @@ h1 {
 }
 .modalbutton:nth-of-type(2) {
   /* CSS properties for the second button */
-  top: -1510px;
+  top: 180px;
 }
 /*Galaxy Fold*/
 @media screen and (max-width: 280px) {
@@ -565,105 +514,61 @@ h1 {
     width: 110%;
   }
 }
-/*media for smartphones*/
-@media screen and (max-width: 480px) and (min-width: 281px) {
+@media screen and (min-width: 281px) and (max-width: 920px) {
   .modalbutton {
-    top: 15px; /* Move the button 10 pixels down */
-    left: 3px;
-    position: fixed;
-    padding: 4px 4px;
+    position: absolute;
+    top: 10px; /* Move the button 10 pixels down */
+    left: 5px;
+    padding: 8px 8px;
     background-color: #d9d9d9;
-    border-radius: 10px;
-    z-index: 14;
-    width: 110px;
+    border-radius: 5px;
+    z-index: 100;
+    width: 90px;
   }
   .modalbutton:nth-of-type(2) {
     /* CSS properties for the second button */
-    top: 50px;
-  }
-  .modal {
-    top: 60%;
-    max-width: 95%;
-  }
-}
-/* Styles for tablets */
-@media screen and (max-width: 821px) and (min-width: 481px) {
-  .modalbutton {
-    top: 30px; /* Move the button 10 pixels down */
-    left: 10px;
-    position: fixed;
-    padding: 10px 10px;
-    background-color: #d9d9d9;
-    border-radius: 10px;
-    z-index: 14;
-    width: 120px;
-  }
-  .modalbutton:nth-of-type(2) {
-    /* CSS properties for the second button */
-    top: 80px;
-  }
-}
-/* Styles for bigger tablets */
-@media screen and (max-width: 1024px) and (min-width: 822px) {
-  .modalbutton {
-    top: -1050px; /* Move the button 10 pixels down */
-    left: 10px;
-    padding: 10px 10px;
-    background-color: #d9d9d9;
-    border-radius: 10px;
-    width: 120px;
-  }
-  .modalbutton:nth-of-type(2) {
-    /* CSS properties for the second button */
-    top: -1030px;
-  }
-}
-/* Even more bigger... */
-@media screen and (max-width: 1300px) and (min-width: 1025px) {
-  .modalbutton {
-    top: -1300px; /* Move the button 10 pixels down */
-    left: 10px;
-    padding: 10px 10px;
-    background-color: #d9d9d9;
-    border-radius: 10px;
-    width: 120px;
-  }
-  .modalbutton:nth-of-type(2) {
-    /* CSS properties for the second button */
-    top: -1280px;
+    top: 55px;
+    left: 5px;
   }
 }
 /* checkin and checkout */
-.container {
-  display: flex;
-  justify-content: space-evenly;
+
+.form-booking {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  border: #ffbc56 solid 5px;
 }
 .input-group {
-  display: inline;
-  width: 300px;
+  width: 25%;
+  border: none;
 }
 .input-label {
-  display: block;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  overflow: hidden;
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 24px;
 }
 
 .btn {
-  position: relative;
-  top: -16px;
-  left: 0;
   cursor: pointer;
   color: black;
   text-align: center;
-  padding: 20px 20px;
+  padding: 50px 20px;
   text-decoration: none;
-  font-size: 17px;
-  width: 135px;
-  background-color: #d9d9d9;
+  font-size: 24px;
+  background-color: #ffbc56;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  border: black solid 1px;
+}
+fieldset {
+  border: none;
 }
 .input-label {
   text-align: center;
@@ -679,20 +584,84 @@ h1 {
 .btn-search {
   color: black;
 }
-@media screen and (max-width: 480px) and (min-width: 281px) {
-  .btn {
-    top: 20px; /* Move the button 10 pixels down */
-    left: 100px;
-    position: relative;
-    padding: 10px 10px;
-    background-color: #d9d9d9;
-    border-radius: 10px;
-  }
-  .input-label {
-    text-align: center;
-  }
-  .options,
-  input {
-    width: 100%;
-  }
+
+/*footer*/
+footer {
+}
+.footer {
+  display: block;
+}
+.footer-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.contact,
+.social-media,
+.newsletter {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+.footer ul {
+  list-style-type: none;
+}
+.icons-wrapper ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+.icons-wrapper li {
+  margin-right: 10px;
+}
+.icons-wrapper a {
+  display: inline-block;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  background-color: #007bff; /* Adjust the background color as needed */
+  color: #fff; /* Adjust the icon color as needed */
+}
+.icons-wrapper i {
+  font-size: 18px; /* Adjust the icon size as needed */
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.input-group2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-group2 input[type="email"] {
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.input-group2 button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 1px;
+  cursor: pointer;
 }
