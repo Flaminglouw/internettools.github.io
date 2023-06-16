@@ -123,13 +123,19 @@ function isElementInViewport(element) {
   );
 }
 
-// Function to handle the scroll event
 function handleScroll() {
   var flyContainer = document.querySelector(".fly");
-  if (isElementInViewport(flyContainer)) {
+  var secondImage = document.querySelector(".overlay-image2");
+
+  if (window.innerWidth > 920 && isElementInViewport(flyContainer)) {
     setTimeout(function () {
       flyContainer.classList.add("animate-fly-in");
     }, 1000); // Add a 1-second delay
+
+    setTimeout(function () {
+      secondImage.classList.add("delayedAppear");
+    }, 1000); // Add a 3-second delay for overlay-image2
+
     window.removeEventListener("scroll", handleScroll); // Remove the scroll event listener
   }
 }

@@ -1,243 +1,164 @@
+/*-------Body----------------*/
 
-  /*-------Body----------------*/
-  
-  body {
-    margin: 0;
-    background: radial-gradient(black, #c0c0c0);
-    background-repeat: no-repeat;
-    font-family: Georgia, "Times New Roman", Times, sans-serif;
-    width: 100%;
-    padding: 0;
-  }
-  h1 {
-    text-align: center;
-    color: whitesmoke;
-  }
-  
-@media screen and (max-width: 1024px) and (min-width: 822px) {
-  html,
-  body {
-    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background: radial-gradient(black, #c0c0c0);
-    background-repeat: no-repeat;
-    font-family: Georgia, "Times New Roman", Times, sans-serif;
-    padding: 0;
-    position: center;
-  }
-}
-  .hotellogo {
-    max-height: 100px;
-    width: 200px;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* Center website */
-  .main {
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-
-  h1{
-    text-align: center;
-    color: white;
-    font-size: 50px;
-    font-size: 50px;
-    word-break:normal;
-    margin-top: 150px;
-  }
-   
-  p{
-    text-align: center;
-    font-size: 30px;
-    color: white;
-
-  }
-  
-  h3 {
-      text-align: center;
-      color: whitesmoke;
-      background-color: #b99668;
-      margin-top: 0%;
-      margin-bottom: 0;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      font-size: 30px;
-  
-  }
-  
-  
-  ul, li { 
-      background-color:#b99668;
-      color: whitesmoke;
-      font-size: medium;
-      margin-top:auto; 
-      padding-top: 5px;
-      padding-bottom: 7px;
-      text-align: center;
-    }
-  
-  
- 
-  .button {
-    border-radius: 4px;
-    background-color:#936a34;
-    border: none;
-    color: #FFFFFF;
-    text-align:center;
-    font-size: 15px;
-    padding: 3px;
-    width: 100px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 50px;
-    margin-left: auto;
-  }
-  
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .button:hover span {
-    padding-right:25px;
-  }
-  
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #f1f1f1;
-    padding: 20px;
-    font-family: Arial;
-  }
-  
-  /* Center website */
-  .main {
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  h1 {
-    font-size: 50px;
-    word-break: break-all;
-  }
-  
-  .row {
-    margin: 8px -16px;
-  }
-  
-  /* Add padding BETWEEN each column (if you want) */
-  .row,
-  .row > .column {
-    padding: 8px;
-  }
-  
- 
-  
-  /* Clear floats after rows */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Content */
-  .content {
-    background-color:#b99668;
-    padding: 10px;
-  }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 900px) {
-    .column {
-      width: 100%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
-/*--------------------Top Navigation Bar -------------------------------------------------------------*/
-.topnav {
-  /*https://www.w3schools.com/howto/howto_js_topnav_responsive.asp I got help from this webiste */
-  overflow: hidden;
-  background-color: #d9d9d9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  padding-left: 80px; /* At the moment I am not sure why the logo and the body's logo dont align*/
-  max-height: 100px;
-  z-index: 13; /* I asked chat GPT how can i make that my button, slides under my topnav menu. Date 23.05.23 17:13*/
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  font-weight: bold;
-  font-family: Georgia, "Times New Roman", Times, serif; /* I was searching for Tex Gyre Termes, but find this works also*/
-  top: 0;
+body {
+  margin: 0;
+  background: radial-gradient(black, #c0c0c0);
+  background-repeat: no-repeat;
+  font-family: Georgia, "Times New Roman", Times, sans-serif;
   width: 100%;
+  padding: 0;
 }
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
+h1 {
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  color: whitesmoke;
 }
 
-.topnav a:hover {
-  color: #b99668;
-  background-color: transparent;
+.hotellogo {
+  max-height: 100px;
+  width: 200px;
 }
 
-.topnav a:active {
-  background-color: #717717;
+* {
+  box-sizing: border-box;
 }
 
-.topnav .icon {
-  display: none;
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-size: 50px;
+  word-break: normal;
+  margin-top: 150px;
+}
+
+p {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  color: whitesmoke;
+  background-color: #b99668;
+  margin-top: 0%;
+  margin-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 30px;
+}
+
+ul,
+li {
+  background-color: #b99668;
+  color: whitesmoke;
+  font-size: medium;
+  margin-top: auto;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #936a34;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  padding: 3px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 50px;
+  margin-left: auto;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
   position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
   right: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
 
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
 
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
 
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
 
+.row {
+  margin: 8px -16px;
+}
 
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
 
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+/* Content */
+.content {
+  background-color: #b99668;
+  padding: 10px;
+}
 
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+  }
+}
 
-
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}

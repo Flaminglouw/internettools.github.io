@@ -1,0 +1,127 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f7f2c1;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.header-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 15%;
+  display: block;
+}
+
+.headline {
+  color: #831d17;
+  flex: 1;
+}
+
+.image-container {
+  background-color: #831d17;
+  padding: 16px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+a {
+  color: #831d17;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a.navbar_a {
+  color: #831d17;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 16px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.text-highlight {
+  color: #484846;
+  font-size: 47px;
+}
+
+.text-container {
+  background-color: #f7f2c1;
+  color: #484846;
+  font-weight: 600;
+  text-align: left;
+  padding: 1%;
+}
+
+.Überschriften-Sehenswürdigkeiten {
+  color: #f7f2c1;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration-line: underline;
+}
+
+.Partnachklamm-container {
+  background-color: #831d17;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Partnachklamm-right {
+  margin-left: 16px;
+  width: 40%;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.Partnachklamm-left {
+  margin-right: 16px;
+  width: 40%;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.Partnachklamm-frame {
+  border: 0;
+  height: 60%;
+  width: 60%;
+  object-position: top center;
+}
+
+.legal-content {
+  padding: 8px;
+}
+
+.legal-text {
+  margin-right: 16px;
+}
+
+.slideshow-container {
+  padding: 0px;
+  position: relative;
+  width: 100%;
+  height: 350px; /* Höhe kann man nach Bedürfnissen anpassen */
+  object-position: top center;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

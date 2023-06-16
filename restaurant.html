@@ -17,10 +17,10 @@
   <nav class="topnav" Id="myTopnav">
     <!--https://www.w3schools.com/howto/howto_css_fixed_menu.asp, https://www.w3schools.com/howto/howto_css_topnav_centered.asp I used this to build the Fixed Menu-->
     <a href="index.html">Zurück</a>
-    <a href="Hayat/Hayat.html">Zimmer</a>
+    <a href="/Hayat/index.html">Zimmer</a>
     <a href="index.html" class="active1"><img src="11.png" alt="Hotellogo" class="hotellogo"></a>
     <a href="restaurant.html">Restaurant</a>
-    <a href="Tim/tim.html">Sehenswürdigkeiten</a>
+    <a href="Tim/index.html">Sehenswürdigkeiten</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -103,16 +103,15 @@
               <li><span class="weekday">Freitag</span> <span class="hours">11:00 bis 22:00</span></li>
               <li><span class="weekday">Samstag</span> <span class="hours">11:00 bis 23:00</span></li>
               <li><span class="weekday">Sonntag</span> <span class="hours">11:00 bis 23:00</span></li>
+              <li>
+                <h2>So Finden Sie uns</h2>
+              </li>
+              <li><a
+                  href="https://www.google.com/maps/place/Frankfurt+University+of+Applied+Sciences/@50.1304923,8.6903215,17z/data=!3m1!4b1!4m6!3m5!1s0x47bd0ec720c4d695:0x2fd6b25adf3bf545!8m2!3d50.1304923!4d8.6925102!16s%2Fm%2F02qbs24?entry=ttu">Am
+                  Fra-uas 123 Frankfurt am Main</a></li>
             </ul>
           </section>
-          <section class="directions-section">
-            <h2>So Finden Sie uns</h2>
-            <p><a
-                href="https://www.google.com/maps/place/Frankfurt+University+of+Applied+Sciences/@50.1304923,8.6903215,17z/data=!3m1!4b1!4m6!3m5!1s0x47bd0ec720c4d695:0x2fd6b25adf3bf545!8m2!3d50.1304923!4d8.6925102!16s%2Fm%2F02qbs24?entry=ttu">Am
-                Fra-uas 123, Frankfurt am Main</a></p>
-            <p><a href="tel:0123456789">Tel:0123456789</a></p>
-            <p><a href="mailto:internettools@gmail.de">Internettools@gmail.de</a></p>
-          </section>
+
         </div>
       </div>
 
@@ -235,21 +234,28 @@
           <div class="newsletter">
             <h2>Our Newsletter</h2>
             <h3>Sign up for special offers</h3>
-            <form action="" method="post" class="footer-form">
-              <div class="form-row">
-                <label for="email"></label>
-                <div class="input-group2">
-                  <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                  <button type="submit">Subscribe</button>
-                </div>
-              </div>
-            </form>
+
+
+
           </div>
 
         </div>
-      </div>
+        <form action="" method="post" class="footer-form">
+          <div class="form-row">
+            <label for="email"></label>
+            <div class="input-group2">
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+              <button class="footer-button" type="submit">Subscribe</button>
+            </div>
+          </div>
+        </form>
     </section>
+
+    <div class="legal-content">
+      <span class="legal-text">(c) 2023 - INTERNETTOOLS</span> | <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
+    </div>
   </footer>
+
   <script src="johannes_script.js"></script>
 </body>
 

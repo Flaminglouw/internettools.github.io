@@ -1,0 +1,93 @@
+/* Top Navigation Bar */
+.topnav {
+  /*https://www.w3schools.com/howto/howto_js_topnav_responsive.asp I got help from this webiste */
+  overflow: hidden;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 300px;
+  z-index: 99; /* I asked chat GPT how can i make that my button, slides under my topnav menu. Date 23.05.23 17:13*/
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-weight: 700;
+  font-family: "Merriweather"; /* I was searching for Tex Gyre Termes, but find this works also*/
+  top: 0;
+  width: 100%;
+  height: 100px;
+  position: sticky;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #b99668;
+}
+
+.topnav a:active {
+  background-color: #717717;
+}
+
+.topnav .icon {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+.hotellogo {
+  max-height: 100px;
+}
+@media screen and (max-width: 920px) {
+  html,
+  body {
+    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .topnav {
+    padding: 0;
+    max-height: 320px; /* this keeps the button menu visable... */
+    position: fixed;
+    height: 100px;
+  }
+  .topnav a:not(:nth-child(3)) {
+    /*The media query is used to hide all the a elements except the first one using the :not(:nth-child(1)) selector.//source chatGPT//*/
+    display: none;
+    text-align: center;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    /*The .topnav.responsive class is used to target the responsive behavior.//source chatGPT//*/
+    flex-direction: column;
+    align-items: flex;
+    position: fixed;
+    height: 320px;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    /*The .topnav.responsive a selector is used to make the links display as blocks for the vertical layout//source chatGPT//*/
+    float: none;
+    display: block;
+  }
+}
