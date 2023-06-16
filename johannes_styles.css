@@ -4,7 +4,7 @@ body {
   margin: 0;
   background: radial-gradient(black, #c0c0c0);
   background-repeat: no-repeat;
-  font-family: Georgia, "Times New Roman", Times, sans-serif;
+  font-family: "Merriweather";
   width: 100%;
   padding: 0;
   margin: 0;
@@ -444,14 +444,14 @@ h1 {
   margin: 0;
   width: 100%;
   font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Merriweather";
 }
 
 .modal-body b {
   float: right;
   font-size: 18px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Merriweather";
 }
 .modal-body p {
   font-size: 16px;
@@ -736,7 +736,23 @@ p {
     align-items: center;
     margin-left: 300px;
     margin-top: -37px;
+    opacity: 1;
   }
+  .footer-form2 {
+    opacity: 0;
+  }
+}
+.footer-form {
+  opacity: 0;
+}
+.footer-form2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: 300px;
+  margin-top: -37px;
+  opacity: 1;
 }
 
 .legal-content {
