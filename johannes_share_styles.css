@@ -1,17 +1,16 @@
 /* Top Navigation Bar */
 .topnav {
-  /*https://www.w3schools.com/howto/howto_js_topnav_responsive.asp I got help from this webiste */
   overflow: hidden;
   background-color: #d9d9d9;
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 300px;
-  z-index: 99; /* I asked chat GPT how can i make that my button, slides under my topnav menu. Date 23.05.23 17:13*/
+  z-index: 99;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   font-weight: 700;
-  font-family: "Merriweather"; /* I was searching for Tex Gyre Termes, but find this works also*/
+  font-family: "Merriweather";
   top: 0;
   width: 100%;
   height: 100px;
@@ -47,7 +46,6 @@
 @media screen and (max-width: 920px) {
   html,
   body {
-    /*https://www.youtube.com/watch?v=0DydwV6KrjA (video:00:55 till 1:33)all of the sudden on my mobile the the x and y was overflowing and making my topnav very wide*/
     width: 100%;
     height: 100%;
     margin: 0;
@@ -56,12 +54,11 @@
   }
   .topnav {
     padding: 0;
-    max-height: 320px; /* this keeps the button menu visable... */
+    max-height: 320px;
     position: fixed;
     height: 100px;
   }
   .topnav a:not(:nth-child(3)) {
-    /*The media query is used to hide all the a elements except the first one using the :not(:nth-child(1)) selector.//source chatGPT//*/
     display: none;
     text-align: center;
   }
@@ -72,7 +69,6 @@
   }
 
   .topnav.responsive {
-    /*The .topnav.responsive class is used to target the responsive behavior.//source chatGPT//*/
     flex-direction: column;
     align-items: flex;
     position: fixed;
@@ -86,8 +82,182 @@
   }
 
   .topnav.responsive a {
-    /*The .topnav.responsive a selector is used to make the links display as blocks for the vertical layout//source chatGPT//*/
     float: none;
     display: block;
   }
+}
+/*footer*/
+footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.footer-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.contact,
+.social-media,
+.newsletter {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  align-items: center;
+}
+.footer ul {
+  list-style-type: none;
+}
+.icons-wrapper ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+.icons-wrapper li {
+  margin-right: 10px;
+}
+.icons-wrapper a {
+  display: inline-block;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  background-color: #007bff; /* Adjust the background color as needed */
+  color: #fff; /* Adjust the icon color as needed */
+}
+.icons-wrapper i {
+  font-size: 18px; /* Adjust the icon size as needed */
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.input-group2 button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 1px;
+  cursor: pointer;
+}
+footer h2,
+h3,
+p {
+  color: whitesmoke;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 150px) and (max-width: 280px) {
+  .base-image2,
+  .overlay-image2 {
+    position: relative;
+    opacity: 1;
+  }
+  .base-image2 {
+    display: none;
+  }
+  .contact,
+  .social-media,
+  .newsletter {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 281px) and (max-width: 920px) {
+  .contact,
+  .social-media,
+  .newsletter {
+    font-size: 12px;
+  }
+  .footer-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: -20px;
+    margin-right: 15px;
+  }
+  .base-image2,
+  .overlay-image2 {
+    position: relative;
+    opacity: 1;
+  }
+  .base-image2 {
+    display: none;
+  }
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+  .footer-button {
+    margin-left: 100px;
+  }
+  .input-group2 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -250px;
+    margin-top: 40px;
+  }
+  .input-group2 input[type="email"] {
+    margin-right: -15px; /* Adjust the margin to your desired value */
+  }
+
+  .input-group2 button.footer-button {
+    margin-left: -5px; /* Adjust the margin to your desired value */
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: -37px;
+    opacity: 1;
+  }
+  .footer-form2 {
+    opacity: 0;
+  }
+}
+.footer-form {
+  opacity: 0;
+}
+.footer-form2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: 34px;
+  margin-top: 26px;
+  opacity: 1;
+}
+
+.legal-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.legal-content a {
+  color: whitesmoke;
 }
