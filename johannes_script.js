@@ -113,6 +113,10 @@ function handleIntersection(entries, observer) {
     if (entry.isIntersecting) {
       entry.target.classList.add("animate-fly-in");
       observer.unobserve(entry.target);
+
+      const overlayImage = document.querySelector(".overlay-image2");
+      overlayImage.style.opacity = 1;
+      overlayImage.style.animation = "delayedAppear 3s forwards";
     }
   });
 }
@@ -120,7 +124,7 @@ function handleIntersection(entries, observer) {
 // Create an intersection observer instance
 const options = {
   threshold: 1, // Adjust the threshold as needed
-  rootMargin: "0px 0px -100px 0px", // Add negative bottom margin to delay triggering
+  rootMargin: "0px 0px 0px 0px", // Add negative bottom margin to delay triggering
 };
 
 const observer = new IntersectionObserver(handleIntersection, options);
