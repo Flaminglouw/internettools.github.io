@@ -107,38 +107,29 @@ document.addEventListener("DOMContentLoaded", function () {
   dateInput.value = formattedDate;
 });
 
-function isElementInViewport(element) {
-  var rect = element.getBoundingClientRect();
-  var offset = 1000; // Adjust the offset value here
-
-  return (
-    rect.top >= -offset &&
-    rect.left >= -offset &&
-    rect.bottom <=
-      (window.innerHeight + offset ||
-        document.documentElement.clientHeight + offset) &&
-    rect.right <=
-      (window.innerWidth + offset ||
-        document.documentElement.clientWidth + offset)
-  );
+// Function to handle the intersection changes
+function handleIntersection(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-fly-in");
+      observer.unobserve(entry.target);
+    }
+  });
 }
 
-function handleScroll() {
-  var flyContainer = document.querySelector(".fly");
-  var secondImage = document.querySelector(".overlay-image2");
+// Create an intersection observer instance
+const options = {
+  threshold: 1, // Adjust the threshold as needed
+  rootMargin: "0px 0px -100px 0px", // Add negative bottom margin to delay triggering
+};
 
-  if (window.innerWidth > 920 && isElementInViewport(flyContainer)) {
-    setTimeout(function () {
-      flyContainer.classList.add("animate-fly-in");
-    }, 1000); // Add a 1-second delay
+const observer = new IntersectionObserver(handleIntersection, options);
 
-    setTimeout(function () {
-      secondImage.classList.add("delayedAppear");
-    }, 1000); // Add a 3-second delay for overlay-image2
+// Get the .fly element
+const flyElement = document.querySelector(".fly");
 
-    window.removeEventListener("scroll", handleScroll); // Remove the scroll event listener
-  }
-}
-
-// Add scroll event listener to trigger the animation
-window.addEventListener("scroll", handleScroll);
+// Delay observation by 1 second
+setTimeout(() => {
+  // Start observing the .fly element
+  observer.observe(flyElement);
+}, 1000); // 1000 milliseconds = 1 second
