@@ -116,7 +116,7 @@ function handleIntersection(entries, observer) {
 
       const overlayImage = document.querySelector(".overlay-image2");
       overlayImage.style.opacity = 1;
-      overlayImage.style.animation = "delayedAppear 3s forwards";
+      overlayImage.style.animation = "delayedAppear 2.5s forwards";
     }
   });
 }
