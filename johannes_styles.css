@@ -240,8 +240,7 @@ h1 {
   flex-wrap: nowrap;
   background-color: black;
   height: 100%;
-  border: black solid 2px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
 }
 .opening-times-section,
 .greeting-container {
