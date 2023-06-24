@@ -120,7 +120,7 @@ h1 {
     display: block;
   }
 }
-/* Homepage-slides */
+/* Homepage-slideshow Restaurant-slideshow*/
 /* source that i used to help my build the slides. https://www.w3schools.com/howto/howto_js_slideshow.asp  */
 /* Slideshow container */
 .slideshow-container {
@@ -162,7 +162,6 @@ h1 {
     opacity: 1;
   }
 }
-
 /* Next & previous buttons */
 .prev,
 .next {
