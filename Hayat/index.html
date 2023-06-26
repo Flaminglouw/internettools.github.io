@@ -6,109 +6,115 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zimmer</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="../johannes_share_styles.css">
+  <link rel="stylesheet" href="hayatstyles.css">
+  <link rel="scriptsheet" href="script.js">
+  <link rel="indexsheet" href="Payment.html">
+  <script src="https://kit.fontawesome.com/270967e116.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+  <!--Icon Library-->
+  <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.css">
+
 </head>
 
 <body>
 
-  <body>
 
-    <!--Navigation Menu-->
-    <nav class="topnav" id="myTopnav">
-      <a href="../index.html">Zurück</a>
-      <a href="../comingsoon.html">Über uns</a>
-      <a href="../index.html"><img src="Hotellogo.png" alt="Hotel logo" class="hotellogo"></a>
-      <a href="../restaurant.html">Restaurant</a>
-      <a href="../Tim/index.html">Sehenswürdigkeiten</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </nav>
+  <!--Navigation Menu-->
+
+  <nav class="topnav" id="myTopnav">
+    <!--https://www.w3schools.com/howto/howto_css_fixed_menu.asp, https://www.w3schools.com/howto/howto_css_topnav_centered.asp I used this to build the Fixed Menu-->
+    <a href="../index.html">Zurück</a>
+    <a href="../tim/Über uns/index.html">Über uns</a>
+    <a href="../index.html"><img src="Hotellogo.png" alt="Hotel logo" class="hotellogo"></a>
+    <a href="../restaurant.html">Restaurant</a>
+    <a href="../tim/index.html">Sehenswürdigkeiten</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+
+
+  <!--Slideshow-->
+
+  <div class="image-container">
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="Hotellogo.png" alt="Goldene Lotusblume">
+      </div>
+      <div class="slide">
+        <img src="Hotelzimmer2.jpeg" alt="Hotelzimmer mit Handtücher">
+      </div>
+      <div class="slide">
+        <img src="Hotelzimmer3.jpeg" alt="Hotelzimmer mit Frühstück">
+      </div>
+    </div>
 
 
     <!-- Roomsection -->
-    <div>
-      <h1>Bekommen Sie einen Einblick in unsere komfortablen Zimmerangeboten. </h1>
-      <p>Hier können Sie beliebige Zimmer ganz nach Ihren Wünschen aussuchen
-        und online oder vor Ort buchen.
-      </p>
+
+    <div class="Überschrift">
+      <h>Bekommen Sie einen Einblick in unsere komfortablen Zimmerangeboten. </h>
+      <p class="Untertitel">Hier können Sie beliebige Zimmer ganz nach Ihren Wünschen aussuchen
+        und online oder vor Ort buchen.</p1>
     </div>
 
-    <!-- Portfolio Gallery Grid -->
-
-    <div class="row">
-      <div class="column">
-        <div class="content">
-          <img src="Einzelzimmer.jpeg" alt="Zimmer mit Balkon" style="width:100%">
-          <h3>Einzelzimmer mit Doppelbett</h3>
-          <ul>
-            <li>Größe: 30m²</li>
-            <li>Zimmer mit Doppelbett</li>
-            <li>Sitzecke</li>
-            <li>Bad mit Dusche und WC </li>
-            <li>Fernsehrer</li>
-            <li>Sitzecke</li>
-            <li>Klimaanlage (manuell/automatisch)</li>
-            <button class="button"><span>Buchen </span></button>
-          </ul>
-        </div>
-      </div>
+    <div class="container">
+      <p class="Titel">Einzelzimmer mit Doppelbett</p>
+      <img src="Einzelzimmer.jpeg" alt="Zimmer mit Balkon" style="width:100%">
+      <ul class=" list">
+        <li>Größe: 30m²</li>
+        <li>Zimmer mit Doppelbett</li>
+        <li>Sitzecke</li>
+        <li>Bad mit Dusche und WC </li>
+        <li>Fernseher</li>
+        <li>Sitzecke</li>
+        <li>Klimaanlage (manuell/automatisch)</li>
+        <button type="button"> <a href=Payment.html>Zur Kasse </a>
+        </button>
+      </ul>
     </div>
 
-    <div class="row">
-      <div class="column">
-        <div class="content">
-          <img src="Doppelzimmer.jpeg" alt="Zweierbetten" style="width:100%">
-          <h3>Doppelzimmer mit Zwei- oder Mehrfachbetten</h3>
-          <ul>
-            <li>Größe: 50m²</li>
-            <li>Zimmer mit zwei Einzelbetten</li>
-            <li>Sitzecke und Schreibtisch</li>
-            <li>Bad mit Dusche und WC </li>
-            <li>Fernsehrer</li>
-            <li>Schreibtisch</li>
-            <li>Klimaanlage (manuell/automatisch)</li>
-            <button class="button"><span>Buchen </span></button>
-          </ul>
-        </div>
-      </div>
+
+    <div class="container">
+      <p class="Titel">Doppelzimmer mit Zwei- oder Mehrfachbetten</p>
+      <img src="Doppelzimmer.jpeg" alt="Zweierbetten" style="width:100%">
+      <ul class="list">
+        <li>Größe: 50m²</li>
+        <li>Zimmer mit zwei Einzelbetten</li>
+        <li>Sitzecke und Schreibtisch</li>
+        <li>Bad mit Dusche und WC </li>
+        <li>Fernseher</li>
+        <li>Schreibtisch</li>
+        <li>Klimaanlage (manuell/automatisch)</li>
+        <button type="button"> <a href=Payment.html>Zur Kasse </a>
+        </button>
+      </ul>
     </div>
 
-    <div class="row">
-      <div class="column">
-        <div class="content">
-          <img src="Suite.jpeg" alt="Zimmer mit großem Bad" style="width:100%">
-          <h3>Suite/Juniorsuite</h3>
-          <ul>
-            <li>Größe: 70- 80m²</li>
-            <li>Großes Doppelbett</li>
-            <li>Bad mit Dusche und Badewanne</li>
-            <li>Einzel-WC</li>
-            <li>Großer Kleiderschrank</li>
-            <li>Fernsehrer</li>
-            <li>Wohn- und Esssbereich</li>
-            <li>Arbeitsplatz</li>
-            <li>Klimaanlage (manuell/automatisch)</li>
-            <li>Mini-Kühlschrank</li>
-            <button class="button"><span>Buchen </span></button>
-          </ul>
-        </div>
-      </div>
+    <div class="container">
+      <p class="Titel">Suite/Juniorsuite</p>
+      <img src="Suite.jpeg" alt="Zimmer mit großem Bad" style="width:100%">
+      <ul class="list">
+        <li>Größe: 70- 80m²</li>
+        <li>Großes Doppelbett</li>
+        <li>Bad mit Dusche und Badewanne</li>
+        <li>Einzel-WC</li>
+        <li>Großer Kleiderschrank</li>
+        <li>Fernseher</li>
+        <li>Wohn- und Essbereich</li>
+        <li>Arbeitsplatz</li>
+        <li>Klimaanlage (manuell/automatisch)</li>
+        <li>Mini-Kühlschrank</li>
+        <button type="button"> <a href=Payment.html> Zur Kasse </a>
+        </button>
+      </ul>
     </div>
-    <!-- END MAIN -->
+
+    <!-- Roomsection END MAIN -->
 
 
-    <!-- References -->
-    <nav class="footer">
-      <a href="Todo.html">Kontakt</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="Impressum.html">Impressum</a>
 
-    </nav>
-
-    <!-- footer please edit in styles CSS. LG Johannes -->
+    <!-- footer -->
     <footer>
       <section class="footer">
         <div class="footer-container">
@@ -154,32 +160,20 @@
                   </div>
                 </div>
               </form>
-
-
             </div>
-
           </div>
-          <form action="javascript:void(0);" method="post" class="footer-form">
-            <div class="form-row">
-
-              <div class="input-group2">
-                <input type="email" id="email-input2" name="email" placeholder="Enter your email address" required>
-                <button class="footer-button" type="submit"
-                  onclick="window.open('../comingsoon.html')">Abonnieren</button>
-              </div>
-            </div>
-          </form>
         </div>
       </section>
 
+
       <div class="legal-content">
-        <span class="legal-text">(c) 2023 - INTERNETTOOLS</span> | <a href="../comingsoon.html">Impressum</a> | <a
-          href="../comingsoon.html">Datenschutz</a>
+        <span class="legal-text">(c) 2023 - INTERNETTOOLS</span> | <a href="../comingsoon.html">Impressum</a> |
+        <a href="../comingsoon.html">Datenschutz</a>
       </div>
     </footer>
+
     <script src="../johannes_share_javascritp.js"></script>
-  </body>
 
-
+</body>
 
 </html>
