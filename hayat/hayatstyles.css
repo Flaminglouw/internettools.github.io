@@ -83,7 +83,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; Johannes: this make the scroll in the y not possible */
   }
   .topnav {
     padding: 0;
