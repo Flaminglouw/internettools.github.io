@@ -603,7 +603,7 @@ footer {
 .footer-row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -80px;
+  margin-right: -35px;
   margin-left: -15px;
   margin-top: 200px;
 }
@@ -710,6 +710,9 @@ p {
     width: 100%;
     max-width: 400px; /* Adjust the max-width value as needed */
     border: #ffbc56 solid 5px;
+  }
+  .footer-row {
+    margin-left: -80px;
   }
 }
 
