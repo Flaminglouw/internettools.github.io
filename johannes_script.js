@@ -10,14 +10,14 @@ function myFunction() {
 // Script for the slide show on the Homapage
 
 let slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex); // Variable um aktuelle Folie zu folgen
 
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  showSlides((slideIndex += n)); // Schaltflächen für nächste oder vorherige Folie klickt
 }
 
 function currentSlide(n) {
-  showSlides((slideIndex = n));
+  showSlides((slideIndex = n)); // // Punkte slideIndex of N und ruft showSlides auf.
 }
 
 function showSlides(n) {
@@ -25,30 +25,34 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
-    slideIndex = 1;
+    // Überprüfung Folienindex n im gültigen Bereich der Folien liegt.
+    slideIndex = 1; // Wenn n > Anzahl der Folie wird SlideIndex auf 1 gesetz.
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    slideIndex = slides.length; // wenn n < wird SlideIndex auf die Anzahl der Folien gesetz.
   }
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = "none"; // alle Folien ausgeblendet display none
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", ""); // Punkte inaktive ohne die Klasse "active"
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides[slideIndex - 1].style.display = "block"; // Folie wird angezeigt style.display = block
+  dots[slideIndex - 1].className += " active"; // Punkte wird als aktive markiert Klasse active die className hinzufügen
 }
 
 // Automatic slideshow
 function startSlideshow() {
+  // funktion wird aufgerufen
   setInterval(function () {
+    // setInterval Wechsel zwischen Folien zu steuern
     if (slideIndex === document.getElementsByClassName("mySlides").length) {
       setTimeout(function () {
+        // Letze Folie Verzögerung
         plusSlides(1);
       }, 10000); // Show last slide for 10 seconds
     } else {
-      plusSlides(1);
+      plusSlides(1); // wenn nicht die letzte Folie
     }
   }, 4000); // Change slide every 4 seconds
 }
