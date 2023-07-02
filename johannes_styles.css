@@ -500,9 +500,6 @@ h1 {
   .modal-header {
     width: 110%;
   }
-  .footer-row {
-    margin-right: -120px;
-  }
 }
 @media screen and (min-width: 281px) and (max-width: 920px) {
   .modalbutton {
@@ -606,7 +603,7 @@ footer {
 .footer-row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
+  margin-right: -80px;
   margin-left: -15px;
   margin-top: 200px;
 }
